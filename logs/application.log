@@ -1,0 +1,106 @@
+2025-05-04 11:14:04 - Starting ExtensaoOngsApplication using Java 21.0.6 with PID 8796 (C:\Users\MARCOS\git\ExtensaoUpVet\target\classes started by MARCOS in C:\Users\MARCOS\git\ExtensaoUpVet)
+2025-05-04 11:14:04 - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 11:14:06 - Starting ExtensaoOngsApplication using Java 21.0.6 with PID 19704 (C:\Users\MARCOS\git\ExtensaoUpVet\target\classes started by MARCOS in C:\Users\MARCOS\git\ExtensaoUpVet)
+2025-05-04 11:14:06 - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 11:14:06 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-04 11:14:06 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-04 11:14:07 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04 11:14:07 - Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interface.
+2025-05-04 11:14:07 - Tomcat initialized with port 8080 (http)
+2025-05-04 11:14:07 - Starting service [Tomcat]
+2025-05-04 11:14:07 - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 11:14:07 - Initializing Spring embedded WebApplicationContext
+2025-05-04 11:14:07 - Root WebApplicationContext: initialization completed in 841 ms
+2025-05-04 11:14:07 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04 11:14:07 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-05-04 11:14:07 - HHH000026: Second-level cache disabled
+2025-05-04 11:14:08 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04 11:14:08 - HikariPool-1 - Starting...
+2025-05-04 11:14:08 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cad465b
+2025-05-04 11:14:08 - HikariPool-1 - Start completed.
+2025-05-04 11:14:09 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-04 11:14:09 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04 11:14:09 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-04 11:14:09 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-04 11:14:09 - LiveReload server is running on port 35729
+2025-05-04 11:14:09 - Tomcat started on port 8080 (http) with context path '/'
+2025-05-04 11:14:09 - Started ExtensaoOngsApplication in 3.006 seconds (process running for 3.603)
+2025-05-04 11:14:12 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-04 11:14:12 - Initializing Servlet 'dispatcherServlet'
+2025-05-04 11:14:12 - Completed initialization in 1 ms
+2025-05-04 11:14:12 - Inicializando create funcionario!
+2025-05-04 11:15:27 - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-05-04 11:15:27 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04 11:15:27 - HikariPool-1 - Shutdown initiated...
+2025-05-04 11:15:27 - HikariPool-1 - Shutdown completed.
+2025-05-04 11:15:28 - Starting ExtensaoOngsApplication using Java 21.0.6 with PID 19704 (C:\Users\MARCOS\git\ExtensaoUpVet\target\classes started by MARCOS in C:\Users\MARCOS\git\ExtensaoUpVet)
+2025-05-04 11:15:28 - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 11:15:28 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04 11:15:28 - Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interface.
+2025-05-04 11:15:28 - Tomcat initialized with port 8080 (http)
+2025-05-04 11:15:28 - Starting service [Tomcat]
+2025-05-04 11:15:28 - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 11:15:28 - Initializing Spring embedded WebApplicationContext
+2025-05-04 11:15:28 - Root WebApplicationContext: initialization completed in 175 ms
+2025-05-04 11:15:28 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04 11:15:28 - HHH000026: Second-level cache disabled
+2025-05-04 11:15:28 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04 11:15:28 - HikariPool-2 - Starting...
+2025-05-04 11:15:28 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78bb6dc1
+2025-05-04 11:15:28 - HikariPool-2 - Start completed.
+2025-05-04 11:15:28 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-04 11:15:28 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04 11:15:28 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-04 11:15:28 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-04 11:15:28 - LiveReload server is running on port 35729
+2025-05-04 11:15:28 - Tomcat started on port 8080 (http) with context path '/'
+2025-05-04 11:15:28 - Started ExtensaoOngsApplication in 0.421 seconds (process running for 82.424)
+2025-05-04 11:15:28 - Condition evaluation unchanged
+2025-05-04 11:19:29 - Starting ExtensaoOngsApplication using Java 21.0.6 with PID 7728 (C:\Users\MARCOS\git\ExtensaoUpVet\target\classes started by MARCOS in C:\Users\MARCOS\git\ExtensaoUpVet)
+2025-05-04 11:19:29 - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 11:19:29 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-04 11:19:29 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-04 11:19:29 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04 11:19:29 - Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interface.
+2025-05-04 11:19:30 - Tomcat initialized with port 8080 (http)
+2025-05-04 11:19:30 - Starting service [Tomcat]
+2025-05-04 11:19:30 - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 11:19:30 - Initializing Spring embedded WebApplicationContext
+2025-05-04 11:19:30 - Root WebApplicationContext: initialization completed in 852 ms
+2025-05-04 11:19:30 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04 11:19:30 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-05-04 11:19:30 - HHH000026: Second-level cache disabled
+2025-05-04 11:19:30 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04 11:19:30 - HikariPool-1 - Starting...
+2025-05-04 11:19:30 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c168fe5
+2025-05-04 11:19:30 - HikariPool-1 - Start completed.
+2025-05-04 11:19:31 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-04 11:19:31 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04 11:19:31 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-04 11:19:31 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-04 11:19:31 - Unable to start LiveReload server
+2025-05-04 11:19:31 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-05-04 11:19:31 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04 11:19:31 - HikariPool-1 - Shutdown initiated...
+2025-05-04 11:19:31 - HikariPool-1 - Shutdown completed.
+2025-05-04 11:19:31 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-04 11:19:31 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-05-04 11:19:36 - Application shutdown requested.
+2025-05-04 11:19:36 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04 11:19:36 - HikariPool-2 - Shutdown initiated...
+2025-05-04 11:19:36 - HikariPool-2 - Shutdown completed.

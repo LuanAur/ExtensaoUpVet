@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import br.com.marcos.model.Funcionario;
 
+
 @Repository
 public interface FuncionarioRepository extends JpaRepository<Funcionario, Long> {
 
