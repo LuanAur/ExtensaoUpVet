@@ -1,0 +1,311 @@
+2025-05-04T11:11:32.074-03:00  INFO 8280 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Starting ExtensaoOngsApplication using Java 21.0.6 with PID 8280 (C:\Users\MARCOS\git\ExtensaoUpVet\target\classes started by MARCOS in C:\Users\MARCOS\git\ExtensaoUpVet)
+2025-05-04T11:11:32.076-03:00 DEBUG 8280 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Running with Spring Boot v3.3.10, Spring v6.1.18
+2025-05-04T11:11:32.077-03:00  INFO 8280 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-04T11:11:32.355-03:00  INFO 8280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04T11:11:32.370-03:00  INFO 8280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+2025-05-04T11:11:32.602-03:00  INFO 8280 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-05-04T11:11:32.606-03:00  INFO 8280 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-05-04T11:11:32.606-03:00  INFO 8280 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04T11:11:32.627-03:00  INFO 8280 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-05-04T11:11:32.627-03:00  INFO 8280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 546 ms
+2025-05-04T11:11:32.696-03:00  INFO 8280 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04T11:11:32.703-03:00  INFO 8280 --- [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-05-04T11:11:32.722-03:00  INFO 8280 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04T11:11:32.722-03:00  INFO 8280 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Starting...
+2025-05-04T11:11:32.764-03:00  INFO 8280 --- [restartedMain] c.z.h.p.HikariPool                       : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@264f73c
+2025-05-04T11:11:32.764-03:00  INFO 8280 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Start completed.
+2025-05-04T11:11:32.848-03:00  INFO 8280 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-04T11:11:32.860-03:00  INFO 8280 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T11:11:32.973-03:00  WARN 8280 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-04T11:11:33.188-03:00  INFO 8280 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-04T11:11:33.203-03:00  INFO 8280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-04T11:11:33.234-03:00  INFO 8280 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-05-04T11:11:33.244-03:00  INFO 8280 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Started ExtensaoOngsApplication in 1.289 seconds (process running for 84.081)
+2025-05-04T11:11:33.248-03:00  INFO 8280 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-04T11:11:39.732-03:00  INFO 8280 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
+2025-05-04T11:11:39.740-03:00  INFO 8280 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T11:11:39.741-03:00  INFO 8280 --- [Thread-7] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown initiated...
+2025-05-04T11:11:39.753-03:00  INFO 8280 --- [Thread-7] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown completed.
+2025-05-04T11:11:39.815-03:00  INFO 8280 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Starting ExtensaoOngsApplication using Java 21.0.6 with PID 8280 (C:\Users\MARCOS\git\ExtensaoUpVet\target\classes started by MARCOS in C:\Users\MARCOS\git\ExtensaoUpVet)
+2025-05-04T11:11:39.816-03:00 DEBUG 8280 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Running with Spring Boot v3.3.10, Spring v6.1.18
+2025-05-04T11:11:39.816-03:00  INFO 8280 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-04T11:11:39.899-03:00  INFO 8280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04T11:11:39.905-03:00  INFO 8280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interface.
+2025-05-04T11:11:39.958-03:00  INFO 8280 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-05-04T11:11:39.959-03:00  INFO 8280 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-05-04T11:11:39.960-03:00  INFO 8280 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04T11:11:39.976-03:00  INFO 8280 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-05-04T11:11:39.976-03:00  INFO 8280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 159 ms
+2025-05-04T11:11:39.996-03:00  INFO 8280 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04T11:11:39.998-03:00  INFO 8280 --- [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-05-04T11:11:40.002-03:00  INFO 8280 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04T11:11:40.002-03:00  INFO 8280 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-3 - Starting...
+2025-05-04T11:11:40.014-03:00  INFO 8280 --- [restartedMain] c.z.h.p.HikariPool                       : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4065d3aa
+2025-05-04T11:11:40.014-03:00  INFO 8280 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-3 - Start completed.
+2025-05-04T11:11:40.033-03:00  INFO 8280 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-04T11:11:40.040-03:00  INFO 8280 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T11:11:40.070-03:00  WARN 8280 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-04T11:11:40.127-03:00  INFO 8280 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-04T11:11:40.132-03:00  INFO 8280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-04T11:11:40.139-03:00  INFO 8280 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-05-04T11:11:40.143-03:00  INFO 8280 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Started ExtensaoOngsApplication in 0.351 seconds (process running for 90.98)
+2025-05-04T11:11:40.145-03:00  INFO 8280 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-04T11:11:50.708-03:00  INFO 8280 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-04T11:11:50.720-03:00  INFO 8280 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T11:11:50.721-03:00  INFO 8280 --- [Thread-11] c.z.h.HikariDataSource                   : HikariPool-3 - Shutdown initiated...
+2025-05-04T11:11:50.726-03:00  INFO 8280 --- [Thread-11] c.z.h.HikariDataSource                   : HikariPool-3 - Shutdown completed.
+2025-05-04T11:11:50.792-03:00  INFO 8280 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Starting ExtensaoOngsApplication using Java 21.0.6 with PID 8280 (C:\Users\MARCOS\git\ExtensaoUpVet\target\classes started by MARCOS in C:\Users\MARCOS\git\ExtensaoUpVet)
+2025-05-04T11:11:50.792-03:00 DEBUG 8280 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Running with Spring Boot v3.3.10, Spring v6.1.18
+2025-05-04T11:11:50.792-03:00  INFO 8280 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-04T11:11:50.870-03:00  INFO 8280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04T11:11:50.878-03:00  INFO 8280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interface.
+2025-05-04T11:11:50.939-03:00  INFO 8280 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-05-04T11:11:50.940-03:00  INFO 8280 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-05-04T11:11:50.940-03:00  INFO 8280 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04T11:11:50.951-03:00  INFO 8280 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-05-04T11:11:50.951-03:00  INFO 8280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 158 ms
+2025-05-04T11:11:50.970-03:00  INFO 8280 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04T11:11:50.972-03:00  INFO 8280 --- [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-05-04T11:11:50.977-03:00  INFO 8280 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04T11:11:50.977-03:00  INFO 8280 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-4 - Starting...
+2025-05-04T11:11:50.992-03:00  INFO 8280 --- [restartedMain] c.z.h.p.HikariPool                       : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14c7ac50
+2025-05-04T11:11:50.993-03:00  INFO 8280 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-4 - Start completed.
+2025-05-04T11:11:51.022-03:00  INFO 8280 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-04T11:11:51.029-03:00  INFO 8280 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T11:11:51.059-03:00  WARN 8280 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-04T11:11:51.109-03:00  INFO 8280 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-04T11:11:51.113-03:00  INFO 8280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-04T11:11:51.120-03:00  INFO 8280 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-05-04T11:11:51.123-03:00  INFO 8280 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Started ExtensaoOngsApplication in 0.357 seconds (process running for 101.961)
+2025-05-04T11:11:51.126-03:00  INFO 8280 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-04T11:11:58.251-03:00  INFO 8280 --- [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-04T11:11:58.256-03:00  INFO 8280 --- [RMI TCP Connection(12)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T11:11:58.256-03:00  INFO 8280 --- [RMI TCP Connection(12)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-4 - Shutdown initiated...
+2025-05-04T11:11:58.259-03:00  INFO 8280 --- [RMI TCP Connection(12)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-4 - Shutdown completed.
+2025-05-04T11:12:01.518-03:00  INFO 8796 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Starting ExtensaoOngsApplication using Java 21.0.6 with PID 8796 (C:\Users\MARCOS\git\ExtensaoUpVet\target\classes started by MARCOS in C:\Users\MARCOS\git\ExtensaoUpVet)
+2025-05-04T11:12:01.525-03:00  INFO 8796 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-04T11:12:01.571-03:00  INFO 8796 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-04T11:12:01.571-03:00  INFO 8796 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-04T11:12:01.982-03:00  INFO 8796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04T11:12:02.024-03:00  INFO 8796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interface.
+2025-05-04T11:12:02.430-03:00  INFO 8796 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-05-04T11:12:02.443-03:00  INFO 8796 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-05-04T11:12:02.444-03:00  INFO 8796 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04T11:12:02.488-03:00  INFO 8796 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-05-04T11:12:02.489-03:00  INFO 8796 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 917 ms
+2025-05-04T11:12:02.621-03:00  INFO 8796 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04T11:12:02.677-03:00  INFO 8796 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-05-04T11:12:02.710-03:00  INFO 8796 --- [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-05-04T11:12:02.932-03:00  INFO 8796 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04T11:12:02.957-03:00  INFO 8796 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-05-04T11:12:03.186-03:00  INFO 8796 --- [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c168fe5
+2025-05-04T11:12:03.188-03:00  INFO 8796 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-05-04T11:12:03.869-03:00  INFO 8796 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-04T11:12:03.908-03:00  INFO 8796 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T11:12:04.086-03:00  WARN 8796 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-04T11:12:04.312-03:00  INFO 8796 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-04T11:12:04.342-03:00  INFO 8796 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-04T11:12:04.383-03:00  INFO 8796 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-05-04T11:12:04.390-03:00  INFO 8796 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Started ExtensaoOngsApplication in 3.229 seconds (process running for 3.832)
+2025-05-04T11:12:12.896-03:00  INFO 8796 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-04T11:12:12.912-03:00  INFO 8796 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T11:12:12.914-03:00  INFO 8796 --- [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-05-04T11:12:12.919-03:00  INFO 8796 --- [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-05-04T11:12:12.980-03:00  INFO 8796 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Starting ExtensaoOngsApplication using Java 21.0.6 with PID 8796 (C:\Users\MARCOS\git\ExtensaoUpVet\target\classes started by MARCOS in C:\Users\MARCOS\git\ExtensaoUpVet)
+2025-05-04T11:12:12.981-03:00  INFO 8796 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-04T11:12:13.105-03:00  INFO 8796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04T11:12:13.114-03:00  INFO 8796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interface.
+2025-05-04T11:12:13.185-03:00  INFO 8796 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-05-04T11:12:13.187-03:00  INFO 8796 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-05-04T11:12:13.187-03:00  INFO 8796 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04T11:12:13.196-03:00  INFO 8796 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-05-04T11:12:13.197-03:00  INFO 8796 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 215 ms
+2025-05-04T11:12:13.218-03:00  INFO 8796 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04T11:12:13.220-03:00  INFO 8796 --- [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-05-04T11:12:13.225-03:00  INFO 8796 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04T11:12:13.225-03:00  INFO 8796 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Starting...
+2025-05-04T11:12:13.236-03:00  INFO 8796 --- [restartedMain] c.z.h.p.HikariPool                       : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2eb6d2
+2025-05-04T11:12:13.237-03:00  INFO 8796 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Start completed.
+2025-05-04T11:12:13.260-03:00  INFO 8796 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-04T11:12:13.266-03:00  INFO 8796 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T11:12:13.304-03:00  WARN 8796 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-04T11:12:13.365-03:00  INFO 8796 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-04T11:12:13.370-03:00  INFO 8796 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-04T11:12:13.377-03:00  INFO 8796 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-05-04T11:12:13.379-03:00  INFO 8796 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Started ExtensaoOngsApplication in 0.425 seconds (process running for 12.822)
+2025-05-04T11:12:13.382-03:00  INFO 8796 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-04T11:12:17.977-03:00  INFO 8796 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-04T11:12:17.977-03:00  INFO 8796 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-05-04T11:12:17.978-03:00  INFO 8796 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2025-05-04T11:12:18.058-03:00  INFO 8796 --- [http-nio-8080-exec-1] b.c.m.s.FuncionarioService               : Inicializando create funcionario!
+2025-05-04T11:13:29.277-03:00  INFO 8796 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-04T11:13:29.291-03:00  INFO 8796 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T11:13:29.291-03:00  INFO 8796 --- [Thread-7] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown initiated...
+2025-05-04T11:13:29.296-03:00  INFO 8796 --- [Thread-7] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown completed.
+2025-05-04T11:13:29.366-03:00 ERROR 8796 --- [restartedMain] o.s.b.SpringApplication                  : Application run failed
+
+org.yaml.snakeyaml.scanner.ScannerException: while scanning for the next token
+found character '\t(TAB)' that cannot start any token. (Do not use \t(TAB) for indentation)
+ in 'reader', line 18, column 1:
+    		path: logs
+    ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:445) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:238) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:637) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:161) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:57) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:43) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:136) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:116) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:241) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:205) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:369) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:348) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:323) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:209) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:369) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:348) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:323) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:209) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:369) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:348) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:323) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:209) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:131) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:162) ~[snakeyaml-2.2.jar:?]
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:515) ~[snakeyaml-2.2.jar:?]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.18.jar:6.1.18]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.18.jar:6.1.18]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.18.jar:6.1.18]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.18.jar:6.1.18]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.10.jar:3.3.10]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) [spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) [spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.3.10.jar:3.3.10]
+	at br.com.marcos.ExtensaoOngsApplication.main(ExtensaoOngsApplication.java:10) [classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.3.10.jar:3.3.10]
+
+2025-05-04T11:13:32.859-03:00  INFO 8796 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Starting ExtensaoOngsApplication using Java 21.0.6 with PID 8796 (C:\Users\MARCOS\git\ExtensaoUpVet\target\classes started by MARCOS in C:\Users\MARCOS\git\ExtensaoUpVet)
+2025-05-04T11:13:32.860-03:00  INFO 8796 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-05-04T11:13:32.940-03:00  INFO 8796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04T11:13:32.947-03:00  INFO 8796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interface.
+2025-05-04T11:13:32.993-03:00  INFO 8796 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-05-04T11:13:32.994-03:00  INFO 8796 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-05-04T11:13:32.994-03:00  INFO 8796 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04T11:13:33.005-03:00  INFO 8796 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-05-04T11:13:33.005-03:00  INFO 8796 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 144 ms
+2025-05-04T11:13:33.025-03:00  INFO 8796 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04T11:13:33.027-03:00  INFO 8796 --- [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-05-04T11:13:33.031-03:00  INFO 8796 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04T11:13:33.031-03:00  INFO 8796 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-3 - Starting...
+2025-05-04T11:13:33.043-03:00  INFO 8796 --- [restartedMain] c.z.h.p.HikariPool                       : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d83f3e5
+2025-05-04T11:13:33.043-03:00  INFO 8796 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-3 - Start completed.
+2025-05-04T11:13:33.064-03:00  INFO 8796 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-04T11:13:33.071-03:00  INFO 8796 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T11:13:33.103-03:00  WARN 8796 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-04T11:13:33.156-03:00  INFO 8796 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-04T11:13:33.162-03:00  INFO 8796 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-04T11:13:33.169-03:00  INFO 8796 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-05-04T11:13:33.171-03:00  INFO 8796 --- [restartedMain] b.c.m.ExtensaoOngsApplication            : Started ExtensaoOngsApplication in 0.362 seconds (process running for 92.613)
+2025-05-04T11:13:33.172-03:00  INFO 8796 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-04T11:13:48.791-03:00  INFO 8796 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-04T11:13:48.802-03:00  INFO 8796 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04T11:13:48.804-03:00  INFO 8796 --- [Thread-11] c.z.h.HikariDataSource                   : HikariPool-3 - Shutdown initiated...
+2025-05-04T11:13:48.808-03:00  INFO 8796 --- [Thread-11] c.z.h.HikariDataSource                   : HikariPool-3 - Shutdown completed.
+2025-05-04T11:13:48.875-03:00 ERROR 8796 --- [restartedMain] o.s.b.SpringApplication                  : Application run failed
+
+org.yaml.snakeyaml.scanner.ScannerException: while scanning for the next token
+found character '\t(TAB)' that cannot start any token. (Do not use \t(TAB) for indentation)
+ in 'reader', line 13, column 1:
+    		logging:
+    ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:445) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:238) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:637) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:161) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:57) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:43) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:136) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:116) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:241) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:205) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:369) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:348) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:323) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:209) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:369) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:348) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:323) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:209) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:369) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:348) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:323) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:209) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:131) ~[snakeyaml-2.2.jar:?]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:162) ~[snakeyaml-2.2.jar:?]
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:515) ~[snakeyaml-2.2.jar:?]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.18.jar:6.1.18]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.18.jar:6.1.18]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.18.jar:6.1.18]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.18.jar:6.1.18]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.10.jar:3.3.10]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) [spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) [spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) [spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) [spring-boot-3.3.10.jar:3.3.10]
+	at br.com.marcos.ExtensaoOngsApplication.main(ExtensaoOngsApplication.java:10) [classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.3.10.jar:3.3.10]
+
