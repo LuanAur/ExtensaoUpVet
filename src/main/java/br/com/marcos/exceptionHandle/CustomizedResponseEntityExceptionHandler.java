@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
-import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import org.springframework.web.reactive.result.method.annotation.ResponseEntityExceptionHandler;
 
 import br.com.marcos.exceptionResponse.ExceptionResponse;
 import br.com.marcos.exceptionResponse.ResourceNotFoundException;
@@ -30,3 +30,5 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
 		return new ResponseEntity<>(exceptionResponse,HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 }
+
+
