@@ -32,6 +32,10 @@ public class Voluntarios {
 	}
 
 
+	public Voluntarios() {
+		
+	}
+	
 	public Voluntarios(RequestVoluntarios voluntariosDto) {
 		this.id = voluntariosDto.id();
 		this.nome = voluntariosDto.nome();
