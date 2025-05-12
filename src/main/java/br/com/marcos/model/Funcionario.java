@@ -45,6 +45,13 @@ public class Funcionario {
 		this.salario = funcionarioDto.salario();
 	}
 
+	@Override
+	public String toString() {
+		return "Funcionario [id=" + id + ", nome=" + nome + ", autenticacao=" + autenticacao + ", cargo=" + cargo
+				+ ", salario=" + salario + "]";
+	}
+
+
 	public Funcionario() {
 		super();
 	}

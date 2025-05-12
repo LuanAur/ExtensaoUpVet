@@ -9,16 +9,6 @@ spring:
       ddl-auto: update
     generate-ddl: true
     show-sql: true
-
-logging:
-  level:
-    root: INFO
-  file:
-    name: logs/application.log
-    path: logs
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
-    file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
-  logfile:
-    max-size: 10MB
-    max-history: 30
+loggin:
+ level:
+  br.com.marcos: DEBUG
