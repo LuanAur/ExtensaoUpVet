@@ -22,7 +22,6 @@ public class Entrada {
 	@GeneratedValue(strategy  = GenerationType.IDENTITY)
 	private Long id;	
 	private String nome;
-	@NumberFormat(pattern = "#,##0,	00")
 	private BigDecimal valor;
 	
 	
