@@ -24,7 +24,7 @@ import br.com.marcos.service.VoluntarioService;
 		@Autowired
 		private VoluntarioService voluntarioService;
 				
-		@GetMapping("/voluntarios")
+		@GetMapping
 		   public ResponseEntity<List<Voluntarios>> list() {
 	        List<Voluntarios> voluntarios = voluntarioService.findAll();
 	        return ResponseEntity.ok(voluntarios);

@@ -27,7 +27,7 @@ import br.com.marcos.service.EntradaService;
 		@Autowired
 		private DespesaService despesaService;
 				
-		@GetMapping("/despesa")
+		@GetMapping
 		   public ResponseEntity<List<Despesa>> list() {
 	        List<Despesa> despesa = despesaService.findAll();
 	        return ResponseEntity.ok(despesa);

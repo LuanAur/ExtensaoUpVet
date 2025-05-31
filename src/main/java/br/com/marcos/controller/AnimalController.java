@@ -24,7 +24,7 @@ import br.com.marcos.service.AnimalService;
 		@Autowired
 		private AnimalService animalService;
 				
-		@GetMapping("/animal")
+		@GetMapping
 		   public ResponseEntity<List<Animal>> list() {
 	        List<Animal> animal = animalService.findAll();
 	        return ResponseEntity.ok(animal);
