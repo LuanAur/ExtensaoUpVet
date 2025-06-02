@@ -24,7 +24,7 @@ import br.com.marcos.service.VeterinarioService;
 		@Autowired
 		private VeterinarioService veterinarioService;
 				
-		@GetMapping("/veterinarios")
+		@GetMapping
 		   public ResponseEntity<List<Veterinarios>> list() {
 	        List<Veterinarios> veterinarios = veterinarioService.findAll();
 	        return ResponseEntity.ok(veterinarios);
@@ -37,7 +37,7 @@ import br.com.marcos.service.VeterinarioService;
 		}
 				
 		@PutMapping
-		public ResponseEntity<Veterinarios> update(@RequestBody RequestVeterinarios dto , @RequestBody Long id){
+		public ResponseEntity<Veterinarios> update(@RequestBody RequestVeterinarios dto , @PathVariable Long id){
 			Veterinarios newVeterinarios = veterinarioService.update(id, dto);
 			return ResponseEntity.ok(newVeterinarios);			
 		}

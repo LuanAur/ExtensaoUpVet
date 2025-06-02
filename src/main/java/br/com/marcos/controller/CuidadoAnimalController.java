@@ -24,7 +24,7 @@ import br.com.marcos.service.CuidadoAnimalService;
 		@Autowired
 		private CuidadoAnimalService cuidadoanimalService;
 				
-		@GetMapping("/cuidadoanimal")
+		@GetMapping
 		   public ResponseEntity<List<CuidadoAnimal>> list() {
 	        List<CuidadoAnimal> cuidadoanimal = cuidadoanimalService.findAll();
 	        return ResponseEntity.ok(cuidadoanimal);

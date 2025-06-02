@@ -35,8 +35,9 @@ public class FuncionarioController {
 	
 	@GetMapping
 	public ResponseEntity<List<Funcionario>> getAll(){
-		logger.debug("Iniciando requisicao Get para Funcionario!");
+		
 		List<Funcionario> funcionarios = funcionarioService.list();
+	
 		return ResponseEntity.ok(funcionarios);
 		
 	}

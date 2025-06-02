@@ -24,7 +24,7 @@ import br.com.marcos.service.EntradaService;
 		@Autowired
 		private EntradaService entradaService;
 				
-		@GetMapping("/entrada")
+		@GetMapping
 		   public ResponseEntity<List<Entrada>> list() {
 	        List<Entrada> entrada = entradaService.findAll();
 	        return ResponseEntity.ok(entrada);
