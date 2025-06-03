@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import br.com.marcos.dto.RequestEntrada;
 import br.com.marcos.exceptionResponse.ResourceNotFoundException;
-import br.com.marcos.model.Despesa;
+import br.com.marcos.model.Valor;
 import br.com.marcos.model.Entrada;
 import br.com.marcos.repository.EntradaRepository;
+import br.com.marcos.repository.ValorRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,28 +25,28 @@ public class EntradaService {
 
 	
 	@Autowired
-	private EntradaRepository entradaRepository;
+	private ValorRepository entradaRepository;
 		
 	
-	public List<Entrada> findAll(){
-		List<Entrada> list = entradaRepository.findAll();
+	public List<Valor> findAll(){
+		List<Valor> list = entradaRepository.findAll();
 		logger.debug("Iniciando repository Entrada findAll");
 		logger.debug("Entradas encontrado: "+list);
 		return list;		
 	}
 	
 	
-	public Entrada create (RequestEntrada entradaDto) {
+	public Valor create (RequestEntrada entradaDto) {
 		logger.debug("Inicializando Repository Entrada create");
-		Entrada entrada = new Entrada(entradaDto);
+		Valor entrada = new Valor(entradaDto);
 		logger.debug("Entrada criada:"+entrada);
 		entradaRepository.save(entrada);
 		return entrada;		
 	}
 	
 	
-	public Entrada update(Long id, RequestEntrada updateEntrada) {
-	    Entrada entradaOld = entradaRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Entrada não encontrado"));	
+	public Valor update(Long id, RequestEntrada updateEntrada) {
+		Valor entradaOld = entradaRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Entrada não encontrado"));	
 		logger.debug("Inicializando Repository Entrada update,oldEntrada:"+entradaOld.toString());
 		entradaOld.setNome(updateEntrada.nome());
 		entradaOld.setValor(updateEntrada.valor());
@@ -55,7 +56,7 @@ public class EntradaService {
 	
 		
 	public void delete(Long id) {
-		Optional<Entrada> e = Optional.of(new Entrada());
+		Optional<Valor> e = Optional.of(new Valor());
 		e = entradaRepository.findById(id);
 		logger.debug("Entrada Excluida:"+e);
 		entradaRepository.deleteById(id);

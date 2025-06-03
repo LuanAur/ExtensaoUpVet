@@ -2,10 +2,13 @@ package br.com.marcos.model;
 
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 import org.springframework.format.annotation.NumberFormat;
 
 import br.com.marcos.dto.RequestDespesa;
 import br.com.marcos.dto.RequestEntrada;
+import br.com.marcos.enums.valorEnum;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,7 +18,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Despesa")
-public class Despesa {	
+public class Valor {	
 	
 	
 	@Id
@@ -25,22 +28,32 @@ public class Despesa {
 	@NumberFormat(pattern = "#,##0,	00")
 	private BigDecimal valor;
 	private String categoria;
+	private valorEnum tipo;
+	private LocalDateTime time;
 	
 	
-	public Despesa(Long id, String nome, BigDecimal valor, String categoria) {
+	
+	
+	
+
+
+	public Valor(Long id, String nome, BigDecimal valor, String categoria, valorEnum tipo, LocalDateTime time) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.valor = valor;
 		this.categoria = categoria;
+		this.tipo = tipo;
+		this.time = time;
 	}
-	
-	public Despesa() {
+
+
+	public Valor() {
 		
 	}
 
 
-	public Despesa(RequestDespesa despesaDto) {
+	public Valor(RequestDespesa despesaDto) {
 		this.id = despesaDto.id();
 		this.nome = despesaDto.nome();
 		this.valor = despesaDto.valor();
@@ -79,6 +92,26 @@ public class Despesa {
 
 	public void setValor(BigDecimal valor) {
 		this.valor = valor;
+	}
+
+
+	public valorEnum getTipo() {
+		return tipo;
+	}
+
+
+	public void setTipo(valorEnum tipo) {
+		this.tipo = tipo;
+	}
+
+
+	public LocalDateTime getTime() {
+		return time;
+	}
+
+
+	public void setTime(LocalDateTime time) {
+		this.time = time;
 	}
 
 	

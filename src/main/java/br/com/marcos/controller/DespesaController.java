@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.marcos.dto.RequestDespesa;
 import br.com.marcos.dto.RequestEntrada;
-import br.com.marcos.model.Despesa;
+import br.com.marcos.model.Valor;
 import br.com.marcos.model.Entrada;
 import br.com.marcos.service.DespesaService;
 import br.com.marcos.service.EntradaService;
@@ -28,8 +28,8 @@ import br.com.marcos.service.EntradaService;
 		private DespesaService despesaService;
 				
 		@GetMapping
-		   public ResponseEntity<List<Despesa>> list() {
-	        List<Despesa> despesa = despesaService.findAll();
+		   public ResponseEntity<List<Valor>> list() {
+	        List<Valor> despesa = despesaService.findAll();
 	        return ResponseEntity.ok(despesa);
 	    }
 		
@@ -40,14 +40,14 @@ import br.com.marcos.service.EntradaService;
 		}
 				
 		@PutMapping
-		public ResponseEntity<Despesa> update(@RequestBody RequestDespesa dto , @RequestBody Long id){
-			Despesa newDespesa = despesaService.update(id, dto);
+		public ResponseEntity<Valor> update(@RequestBody RequestDespesa dto , @RequestBody Long id){
+			Valor newDespesa = despesaService.update(id, dto);
 			return ResponseEntity.ok(newDespesa);			
 		}
 				
 		@PostMapping
-		public ResponseEntity<Despesa> post(@RequestBody RequestDespesa dto ){
-			Despesa despesa = despesaService.create(dto);
+		public ResponseEntity<Valor> post(@RequestBody RequestDespesa dto ){
+			Valor despesa = despesaService.create(dto);
 			return ResponseEntity.ok(despesa);			
 		}
 				
