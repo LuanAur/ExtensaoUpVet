@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import br.com.marcos.dto.RequestDespesa;
 import br.com.marcos.exceptionResponse.ResourceNotFoundException;
-import br.com.marcos.model.Despesa;
-import br.com.marcos.repository.DespesaRepository;
+import br.com.marcos.model.Valor;
+import br.com.marcos.repository.ValorRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,28 +23,28 @@ public class DespesaService {
 
 	
 	@Autowired
-	private DespesaRepository despesaRepository;
+	private ValorRepository despesaRepository;
 		
 	
-	public List<Despesa> findAll(){
+	public List<Valor> findAll(){
 		logger.debug("Iniciando repository Despesa findAll");
-		List<Despesa> list = despesaRepository.findAll();
+		List<Valor> list = despesaRepository.findAll();
 		logger.debug("DespesaService encontrado: "+list);
 		return list;		
 	}
 	
 	
-	public Despesa create (RequestDespesa despesaDto) {
+	public Valor create (RequestDespesa despesaDto) {
 		logger.debug("Inicializando Repository Despesa create");
-		Despesa despesa = new Despesa(despesaDto);
+		Valor despesa = new Valor(despesaDto);
 		logger.debug("Despesa criada:"+despesa);
 		despesaRepository.save(despesa);
 		return despesa;		
 	}
 	
 	
-	public Despesa update(Long id, RequestDespesa updateDespesa) {
-	   Despesa despesaOld = despesaRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Despesa não encontrado"));
+	public Valor update(Long id, RequestDespesa updateDespesa) {
+	   Valor despesaOld = despesaRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Despesa não encontrado"));
 	   logger.debug("Inicializando Repository Despesas update,oldDespesa:"+despesaOld.toString());
 	   despesaOld.setCategoria(updateDespesa.categoria());
 	   despesaOld.setNome(updateDespesa.nome());
@@ -55,7 +55,7 @@ public class DespesaService {
 	
 		
 	public void delete(Long id) {
-		Optional<Despesa> d = Optional.of(new Despesa());
+		Optional<Valor> d = Optional.of(new Valor());
 		d = despesaRepository.findById(id);
 		logger.debug("Despesa Excluida:"+d);
 		despesaRepository.deleteById(id);

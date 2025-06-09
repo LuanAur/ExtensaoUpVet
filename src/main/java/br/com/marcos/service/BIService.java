@@ -4,30 +4,29 @@ import java.math.BigDecimal;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.marcos.dto.RequestBI;
+import br.com.marcos.enums.valorEnum;
 import br.com.marcos.repository.EntradaRepository;
-import br.com.marcos.repository.DespesaRepository;
+import br.com.marcos.repository.ValorRepository;
 
 @Service
 public class BIService {
 
-    private final EntradaRepository entradaRepository;
-    private final DespesaRepository despesaRepository;
+    @Autowired
+    private ValorRepository valorRepository;
     
 	private static final Logger logger = LoggerFactory.getLogger(FuncionarioService.class);
 
 
-    public BIService(EntradaRepository entradaRepository, DespesaRepository despesaRepository) {
-        this.entradaRepository = entradaRepository;
-        this.despesaRepository = despesaRepository;
-    }
+   
 
     public RequestBI gerarDemonstrativo() {
     	 logger.debug("Inicializando BI");
-        BigDecimal totalEntrada = entradaRepository.calcularTotalEntrada();
-        BigDecimal totalDespesa = despesaRepository.calcularTotalDespesa();
+        BigDecimal totalEntrada = valorRepository.calcularTotal(valorEnum.ENTRADA);
+        BigDecimal totalDespesa = valorRepository.calcularTotal(valorEnum.DESPESA);
         BigDecimal resultado = totalEntrada.subtract(totalDespesa);
         logger.debug("Resultados do BI: entradas:"+totalDespesa+"\nTotal Despesa:"+totalDespesa+"\nResultado:"+resultado);
         return new RequestBI(totalEntrada, totalDespesa, resultado);
