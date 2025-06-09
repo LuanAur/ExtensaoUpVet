@@ -15,7 +15,7 @@ import br.com.marcos.model.Valor;
 @Repository
 public interface ValorRepository extends JpaRepository<Valor, Long> {
 	
-	@Query("SELECT COALESCE(SUM(d.valor), 0) FROM Despesa d where d.tipo = :tipo")
+	@Query("SELECT COALESCE(SUM(d.valor), 0) FROM Valor d where d.tipo = :tipo")
     BigDecimal calcularTotal(@Param("tipo") valorEnum tipo); 
 		
 }

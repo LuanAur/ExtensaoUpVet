@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import br.com.marcos.dto.RequestBI;
 import br.com.marcos.enums.valorEnum;
-import br.com.marcos.repository.EntradaRepository;
 import br.com.marcos.repository.ValorRepository;
 
 @Service
@@ -24,7 +23,7 @@ public class BIService {
    
 
     public RequestBI gerarDemonstrativo() {
-    	 logger.debug("Inicializando BI");
+    	logger.debug("Inicializando BI");
         BigDecimal totalEntrada = valorRepository.calcularTotal(valorEnum.ENTRADA);
         BigDecimal totalDespesa = valorRepository.calcularTotal(valorEnum.DESPESA);
         BigDecimal resultado = totalEntrada.subtract(totalDespesa);

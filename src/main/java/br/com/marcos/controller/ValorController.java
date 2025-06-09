@@ -14,15 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.marcos.dto.RequestDespesa;
-import br.com.marcos.dto.RequestEntrada;
+import br.com.marcos.dto.RequestValorDto;
 import br.com.marcos.model.Valor;
-import br.com.marcos.model.Entrada;
 import br.com.marcos.service.DespesaService;
-import br.com.marcos.service.EntradaService;
 
 	@RestController
-	@RequestMapping("/despesa")
-	public class DespesaController {
+	@RequestMapping("/valor")
+	public class ValorController {
 		
 		@Autowired
 		private DespesaService despesaService;
@@ -46,8 +44,9 @@ import br.com.marcos.service.EntradaService;
 		}
 				
 		@PostMapping
-		public ResponseEntity<Valor> post(@RequestBody RequestDespesa dto ){
+		public ResponseEntity<Valor> post(@RequestBody RequestValorDto dto ){
 			Valor despesa = despesaService.create(dto);
+			System.out.print("Tipo"+dto.tipo());
 			return ResponseEntity.ok(despesa);			
 		}
 				
