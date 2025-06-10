@@ -4,13 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import br.com.marcos.dto.RequestEntrada;
+import br.com.marcos.dto.RequestDespesa;
+import br.com.marcos.dto.RequestValorDto;
 import br.com.marcos.exceptionResponse.ResourceNotFoundException;
 import br.com.marcos.model.Valor;
-import br.com.marcos.model.Entrada;
-import br.com.marcos.repository.EntradaRepository;
 import br.com.marcos.repository.ValorRepository;
 
 import org.slf4j.Logger;
@@ -36,7 +34,7 @@ public class EntradaService {
 	}
 	
 	
-	public Valor create (RequestEntrada entradaDto) {
+	public Valor create (RequestValorDto entradaDto) {
 		logger.debug("Inicializando Repository Entrada create");
 		Valor entrada = new Valor(entradaDto);
 		logger.debug("Entrada criada:"+entrada);
@@ -45,7 +43,7 @@ public class EntradaService {
 	}
 	
 	
-	public Valor update(Long id, RequestEntrada updateEntrada) {
+	public Valor update(Long id, RequestDespesa updateEntrada) {
 		Valor entradaOld = entradaRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Entrada não encontrado"));	
 		logger.debug("Inicializando Repository Entrada update,oldEntrada:"+entradaOld.toString());
 		entradaOld.setNome(updateEntrada.nome());

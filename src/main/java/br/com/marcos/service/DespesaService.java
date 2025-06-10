@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import br.com.marcos.dto.RequestDespesa;
+import br.com.marcos.dto.RequestValorDto;
 import br.com.marcos.exceptionResponse.ResourceNotFoundException;
 import br.com.marcos.model.Valor;
 import br.com.marcos.repository.ValorRepository;
@@ -34,7 +35,7 @@ public class DespesaService {
 	}
 	
 	
-	public Valor create (RequestDespesa despesaDto) {
+	public Valor create (RequestValorDto despesaDto) {
 		logger.debug("Inicializando Repository Despesa create");
 		Valor despesa = new Valor(despesaDto);
 		logger.debug("Despesa criada:"+despesa);
@@ -46,7 +47,6 @@ public class DespesaService {
 	public Valor update(Long id, RequestDespesa updateDespesa) {
 	   Valor despesaOld = despesaRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Despesa não encontrado"));
 	   logger.debug("Inicializando Repository Despesas update,oldDespesa:"+despesaOld.toString());
-	   despesaOld.setCategoria(updateDespesa.categoria());
 	   despesaOld.setNome(updateDespesa.nome());
 	   despesaOld.setValor(updateDespesa.valor());
 	   logger.debug("Inicializando Repository CuidadoAnimal update,newDespesa:"+despesaOld.toString());

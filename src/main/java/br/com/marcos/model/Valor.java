@@ -7,8 +7,9 @@ import java.time.LocalDateTime;
 import org.springframework.format.annotation.NumberFormat;
 
 import br.com.marcos.dto.RequestDespesa;
-import br.com.marcos.dto.RequestEntrada;
+import br.com.marcos.dto.RequestValorDto;
 import br.com.marcos.enums.valorEnum;
+import br.com.marcos.service.DespesaService;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,7 +28,6 @@ public class Valor {
 	private String nome;
 	@NumberFormat(pattern = "#,##0,	00")
 	private BigDecimal valor;
-	private String categoria;
 	private valorEnum tipo;
 	private LocalDateTime time;
 	
@@ -37,12 +37,11 @@ public class Valor {
 	
 
 
-	public Valor(Long id, String nome, BigDecimal valor, String categoria, valorEnum tipo, LocalDateTime time) {
+	public Valor(Long id, String nome, BigDecimal valor, valorEnum tipo, LocalDateTime time) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.valor = valor;
-		this.categoria = categoria;
 		this.tipo = tipo;
 		this.time = time;
 	}
@@ -57,18 +56,20 @@ public class Valor {
 		this.id = despesaDto.id();
 		this.nome = despesaDto.nome();
 		this.valor = despesaDto.valor();
-		this.categoria = despesaDto.categoria();
+		this.tipo = despesaDto.tipo();
+	}
+	
+	public Valor(RequestValorDto despesaDto) {
+		this.id = despesaDto.id();
+		this.nome = despesaDto.nome();
+		this.valor = despesaDto.valor();
+		this.tipo = despesaDto.tipo();
+		this.time = despesaDto.time();
 	}
 
 	
 	
-	public String getCategoria() {
-		return categoria;
-	}
 
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
 
 	public Long getId() {
 		return id;

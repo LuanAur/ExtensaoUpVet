@@ -5,6 +5,6 @@ import java.time.LocalDateTime;
 
 import br.com.marcos.enums.valorEnum;
 
-public record RequestDespesa(Long id, String nome, BigDecimal valor,valorEnum tipo ) {
+public record RequestValorDto(Long id, String nome, BigDecimal valor, valorEnum tipo, LocalDateTime time) {
 
 }
