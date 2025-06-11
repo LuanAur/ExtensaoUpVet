@@ -36,8 +36,8 @@ import br.com.marcos.service.VoluntarioService;
 			return ResponseEntity.ok().build();			
 		}
 				
-		@PutMapping
-		public ResponseEntity<Voluntarios> update(@RequestBody RequestVoluntarios dto , @RequestBody Long id){
+		@PutMapping(value = "/{id}")
+		public ResponseEntity<Voluntarios> update(@RequestBody RequestVoluntarios dto , @PathVariable Long id){
 			Voluntarios newVoluntarios = voluntarioService.update(id, dto);
 			return ResponseEntity.ok(newVoluntarios);			
 		}
