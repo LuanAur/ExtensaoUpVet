@@ -12,3 +12,7 @@ spring:
 loggin:
  level:
   br.com.marcos: DEBUG
+api:
+   security:
+     token:
+       secret: ${JWT_SECRET:14j06y25t}
