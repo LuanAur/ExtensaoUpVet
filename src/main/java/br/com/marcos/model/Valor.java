@@ -8,7 +8,7 @@ import org.springframework.format.annotation.NumberFormat;
 
 import br.com.marcos.dto.RequestDespesa;
 import br.com.marcos.dto.RequestValorDto;
-import br.com.marcos.enums.valorEnum;
+import br.com.marcos.enums.ValorEnum;
 import br.com.marcos.service.DespesaService;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,7 +28,7 @@ public class Valor {
 	private String nome;
 	@NumberFormat(pattern = "#,##0,	00")
 	private BigDecimal valor;
-	private valorEnum tipo;
+	private ValorEnum tipo;
 	private LocalDateTime time;
 	
 	
@@ -37,7 +37,7 @@ public class Valor {
 	
 
 
-	public Valor(Long id, String nome, BigDecimal valor, valorEnum tipo, LocalDateTime time) {
+	public Valor(Long id, String nome, BigDecimal valor, ValorEnum tipo, LocalDateTime time) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -96,12 +96,12 @@ public class Valor {
 	}
 
 
-	public valorEnum getTipo() {
+	public ValorEnum getTipo() {
 		return tipo;
 	}
 
 
-	public void setTipo(valorEnum tipo) {
+	public void setTipo(ValorEnum tipo) {
 		this.tipo = tipo;
 	}
 

@@ -26,6 +26,7 @@ public class Funcionario {
 	private BigDecimal salario;
 
 	
+	
 
 	public Funcionario(Long id, String nome, String autenticacao, String cargo, BigDecimal salario) {
 		super();

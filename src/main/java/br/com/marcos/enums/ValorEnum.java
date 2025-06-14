@@ -1,6 +1,6 @@
 package br.com.marcos.enums;
 
-public enum valorEnum {
+public enum ValorEnum {
 	
 	DESPESA,
 	ENTRADA

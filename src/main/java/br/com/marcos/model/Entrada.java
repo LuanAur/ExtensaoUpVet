@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 
 import org.springframework.format.annotation.NumberFormat;
 
-import br.com.marcos.dto.RequestEntrada;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -37,11 +36,7 @@ public class Entrada {
 	}
 
 
-	public Entrada(RequestEntrada entradaDto) {
-		this.id = entradaDto.id();
-		this.nome = entradaDto.nome();
-		this.valor = entradaDto.valor();	
-	}
+	
 
 	
 	

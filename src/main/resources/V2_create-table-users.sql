@@ -1,0 +1,8 @@
+CREATE TABLE  if NOT EXISTS users(
+	
+	id INT NOT NULL AUTO_INCREMENT,
+	user_name varchar(255) NOT NULL UNIQUE, 
+	password TEXT NOT NULL,
+	role TEXT NOT NULL,
+	PRIMARY KEY (id)
+);
