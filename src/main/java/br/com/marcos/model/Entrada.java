@@ -5,7 +5,10 @@ import java.math.BigDecimal;
 
 import org.springframework.format.annotation.NumberFormat;
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 82f9b6edf944b01807f5f8eb4aaab90ebf351b53
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -37,7 +40,11 @@ public class Entrada {
 	}
 
 
+<<<<<<< HEAD
+	
+=======
 
+>>>>>>> 82f9b6edf944b01807f5f8eb4aaab90ebf351b53
 
 	
 	

@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import br.com.marcos.enums.valorEnum;
+import br.com.marcos.enums.ValorEnum;
 import br.com.marcos.model.Valor;
 
 
@@ -16,6 +16,6 @@ import br.com.marcos.model.Valor;
 public interface ValorRepository extends JpaRepository<Valor, Long> {
 	
 	@Query("SELECT COALESCE(SUM(d.valor), 0) FROM Valor d where d.tipo = :tipo")
-    BigDecimal calcularTotal(@Param("tipo") valorEnum tipo); 
+    BigDecimal calcularTotal(@Param("tipo") ValorEnum tipo); 
 		
 }
