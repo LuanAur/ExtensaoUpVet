@@ -22,7 +22,7 @@ public class Veterinarios {
 	private String nome;
 	private String autenticacao;
 	private String receita;
-	private String diagnostisco;
+	private String diagnostico;
 	private String nomedoanimal;
 	
 	
@@ -32,7 +32,7 @@ public class Veterinarios {
 		this.nome = nome;
 		this.autenticacao = autenticacao;
 		this.receita = receita;
-		this.diagnostisco = diagnostico;
+		this.diagnostico = diagnostico;
 		this.nomedoanimal = nomedoanimal;
 	}
 	
@@ -46,7 +46,7 @@ public class Veterinarios {
 		this.nome = veterinariosDto.nome();
 		this.autenticacao = veterinariosDto.autenticacao();
 		this.receita = veterinariosDto.receita();
-		this.diagnostisco = veterinariosDto.diagnostico();
+		this.diagnostico = veterinariosDto.diagnostico();
 		this.nomedoanimal = veterinariosDto.nomedoanimal();
 	}
 
@@ -71,13 +71,13 @@ public class Veterinarios {
 	}
 
 
-	public String getDiagnostisco() {
-		return diagnostisco;
+	public String getDiagnostico() {
+		return diagnostico;
 	}
 
 
-	public void setDiagnostisco(String diagnostisco) {
-		this.diagnostisco = diagnostisco;
+	public void setDiagnostico(String diagnostico) {
+		this.diagnostico = diagnostico;
 	}
 
 

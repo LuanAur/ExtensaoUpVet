@@ -34,7 +34,6 @@ private UserRepository repository;
 		return list;
 	}
 	
-	
 	public Funcionario create(RequestFuncionario funcionarioDto) {
 		logger.debug("Inicializando create funcionario!");
 		Funcionario funcionario = new Funcionario(funcionarioDto);
@@ -51,25 +50,20 @@ private UserRepository repository;
 		funcionarioOld.setCargo(updateFuncionario.cargo());
 		funcionarioOld.setSalario(updateFuncionario.salario());
 		logger.debug("Funcionario atualizado:"+ funcionarioOld.toString());
-		return funcionarioOld;
+		return funcionarioRepository.save(funcionarioOld);
 		
 	}
-	
 	  @Transactional
 	public void delete(Long id) {
 		 logger.debug("Deletando Funcionario de Id:" + id);
-
 	        // Verifica se o funcionário existe antes de tentar excluir
 	        Funcionario funcionario = funcionarioRepository.findById(id)
 	                .orElseThrow(() -> new ResourceNotFoundException("Funcionario nao encontrado"));
-
 	        // Excluindo o usuário associado ao funcionário, se existir
 	        logger.debug("Excluindo usuário associado ao funcionário...");
 	        repository.deleteByFuncionarioId(id);  // Exclui usuários relacionados ao funcionário
-
 	        // Exclui o funcionário
 	        funcionarioRepository.deleteById(id);
-	        
 	        logger.debug("Funcionario de Id:" + id + " deletado com sucesso.");
 	}
 	

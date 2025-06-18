@@ -37,8 +37,8 @@ import br.com.marcos.service.DespesaService;
 			return ResponseEntity.ok().build();			
 		}
 				
-		@PutMapping
-		public ResponseEntity<Valor> update(@RequestBody RequestDespesa dto , @RequestBody Long id){
+		@PutMapping(value = "/{id}")
+		public ResponseEntity<Valor> update(@RequestBody RequestDespesa dto , @PathVariable Long id){
 			Valor newDespesa = despesaService.update(id, dto);
 			return ResponseEntity.ok(newDespesa);			
 		}

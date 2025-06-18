@@ -49,7 +49,7 @@ public class VeterinarioService {
 	    Veterinarios veterinariosOld = veterinarioRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Veterinário não encontrado"));	   
 		logger.debug("Inicializando Repository Veterinarios update,oldVeterinarios:"+veterinariosOld.toString());
 		veterinariosOld.setAutenticacao(updateVeterinarios.autenticacao());
-		veterinariosOld.setDiagnostisco(updateVeterinarios.diagnostico());
+		veterinariosOld.setDiagnostico(updateVeterinarios.diagnostico());
 		veterinariosOld.setNome(updateVeterinarios.nome());
 		veterinariosOld.setNomedoanimal(updateVeterinarios.nomedoanimal());
 		veterinariosOld.setReceita(updateVeterinarios.receita());

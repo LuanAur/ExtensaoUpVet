@@ -52,8 +52,8 @@ public class FuncionarioController {
 	}
 	
 	
-	@PutMapping
-	public ResponseEntity<Funcionario> update(@RequestBody RequestFuncionario dto , @RequestBody Long id){
+	@PutMapping(value = "/{id}")
+	public ResponseEntity<Funcionario> update(@RequestBody RequestFuncionario dto , @PathVariable Long id){
 		logger.debug("Iniciando requisicao Update!"); 
 		logger.debug("Id do funcionario a ser atualizado:"+id);
 		logger.debug("Atualizando funcionario para novos dados:"+dto);

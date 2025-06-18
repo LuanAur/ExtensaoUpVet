@@ -36,7 +36,7 @@ import br.com.marcos.service.VeterinarioService;
 			return ResponseEntity.ok().build();			
 		}
 				
-		@PutMapping
+		@PutMapping(value = "/{id}")
 		public ResponseEntity<Veterinarios> update(@RequestBody RequestVeterinarios dto , @PathVariable Long id){
 			Veterinarios newVeterinarios = veterinarioService.update(id, dto);
 			return ResponseEntity.ok(newVeterinarios);			

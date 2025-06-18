@@ -16,7 +16,7 @@ public class CorsConfig {
                 registry.addMapping("/**") // Permite todas as rotas
                         .allowedOrigins("http://localhost:3000") // Permite chamadas do frontend
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
-                        .allowedHeaders("*") // Permite todos os headers
+                        .allowedHeaders("Authorization", "Content-Type", "X-Requested-With")
                         .allowCredentials(true); // Permite envio de cookies/sessões
             }
         };

@@ -90,11 +90,6 @@
 </dependency>
 
 
-		<dependency>
-			<groupId>com.pedra</groupId>
-			<artifactId>RinhaV0.1</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
 
 	<build>
