@@ -1,0 +1,18 @@
+/* calendar.css */
+.custom-calendar .p-button {
+    background-color: #e3b963 !important;
+    border: none !important;
+    color: white !important;
+  }
+  
+  .custom-calendar .p-button:hover {
+    background-color: #c49d54 !important;
+  }
+
+  /* Remove default focus ring */
+  .p-button {
+    outline: none;
+    border: none;
+  }
+  
+  
