@@ -62,7 +62,7 @@ const ListFunc: React.FC = () => {
     const fetchFuncionarios = async () => {
       setLoading(true);
       try {
-        const response = await authFetch("http://localhost:8080/funcionario");
+        const response = await authFetch("http://168.231.88.35:8080/funcionario");
     
         if (!response.ok) {
           // Adiciona log de diagnóstico
@@ -88,7 +88,7 @@ const ListFunc: React.FC = () => {
   const onRowEditComplete = async (e: DataTableRowEditCompleteEvent) => {
     const updatedFuncionario = e.newData as Funcionario;
     try {
-      await authFetch(`http://localhost:8080/funcionario/${updatedFuncionario.id}`, {
+      await authFetch(`http://168.231.88.35:8080/funcionario/${updatedFuncionario.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedFuncionario),
@@ -105,7 +105,7 @@ const ListFunc: React.FC = () => {
 
   const deleteFuncionario = async (id: number) => {
     try {
-      await authFetch(`http://localhost:8080/funcionario/${id}`, { method: "DELETE" });
+      await authFetch(`http://168.231.88.35:8080/funcionario/${id}`, { method: "DELETE" });
       setFuncionarios(funcionarios.filter((f) => f.id !== id));
     } catch (error) {
       console.error("Erro ao deletar funcionário:", error);

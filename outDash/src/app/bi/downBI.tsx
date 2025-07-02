@@ -63,7 +63,7 @@ const ListFluxoCaixa: React.FC = () => {
   const fetchLancamentos = async () => {
     setLoading(true);
     try {
-      const res = await authFetch("http://localhost:8080/valor");
+      const res = await authFetch("http://168.231.88.35:8080/valor");
       const time = await res.json();
   
       interface Lancamento {
@@ -95,7 +95,7 @@ const ListFluxoCaixa: React.FC = () => {
     const updatedLancamento = e.newData as Lancamento;
   
     try {
-      await authFetch(`http://localhost:8080/valor/${updatedLancamento.id}`, {
+      await authFetch(`http://168.231.88.35:8080/valor/${updatedLancamento.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedLancamento),
@@ -113,7 +113,7 @@ const ListFluxoCaixa: React.FC = () => {
 
   const deleteLancamento = async (id: number) => {
     try {
-      await authFetch(`http://localhost:8080/valor/${id}`, {
+      await authFetch(`http://168.231.88.35:8080/valor/${id}`, {
         method: "DELETE",
       });
       setLancamentos(lancamentos.filter((l) => l.id !== id));

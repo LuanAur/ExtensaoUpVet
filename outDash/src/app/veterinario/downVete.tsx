@@ -64,7 +64,7 @@ const ListVeterinarios: React.FC = () => {
   const fetchVeterinarios = async () => {
     setLoading(true);
     try {
-      const response = await authFetch("http://localhost:8080/veterinarios");
+      const response = await authFetch("http://168.231.88.35:8080/veterinarios");
       const data = await response.json();
       setVeterinarios(data);
     } catch (err: unknown) {
@@ -81,7 +81,7 @@ const ListVeterinarios: React.FC = () => {
   const onRowEditComplete = async (e: DataTableRowEditCompleteEvent) => {
     const updatedVeterinario = e.newData as Veterinario;
     try {
-      await authFetch(`http://localhost:8080/veterinarios/${updatedVeterinario.id}`, {
+      await authFetch(`http://168.231.88.35:8080/veterinarios/${updatedVeterinario.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedVeterinario),
@@ -98,7 +98,7 @@ const ListVeterinarios: React.FC = () => {
 
   const deleteVeterinario = async (id: number) => {
     try {
-      await authFetch(`http://localhost:8080/veterinarios/${id}`, { method: "DELETE" });
+      await authFetch(`http://168.231.88.35:8080/veterinarios/${id}`, { method: "DELETE" });
       setVeterinarios(veterinarios.filter((v) => v.id !== id));
     } catch (error) {
       console.error("Erro ao deletar veterinário:", error);

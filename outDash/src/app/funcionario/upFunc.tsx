@@ -41,7 +41,7 @@ const FuncionarioModal: React.FC<FuncionarioModalProps> = ({ isOpen, onClose }) 
     }
 
     try {
-      const response = await authFetch("http://localhost:8080/funcionario", {
+      const response = await authFetch("http://168.231.88.35:8080/funcionario", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, salario: Number(salario) }),

@@ -58,7 +58,7 @@ const ListVolun: React.FC = () => {
   const fetchVoluntarios = async () => {
     setLoading(true);
     try {
-      const response = await authFetch("http://localhost:8080/voluntarios");
+      const response = await authFetch("http://168.231.88.35:8080/voluntarios");
       const data = await response.json();
       setVoluntarios(data);
     } catch (err: unknown) {
@@ -75,7 +75,7 @@ const ListVolun: React.FC = () => {
   const onRowEditComplete = async (e: DataTableRowEditCompleteEvent) => {
     const updatedVoluntario = e.newData as Voluntario;
     try {
-      await authFetch(`http://localhost:8080/voluntarios/${updatedVoluntario.id}`, {
+      await authFetch(`http://168.231.88.35:8080/voluntarios/${updatedVoluntario.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedVoluntario),
@@ -92,7 +92,7 @@ const ListVolun: React.FC = () => {
 
   const deleteVoluntario = async (id: number) => {
     try {
-      await authFetch(`http://localhost:8080/voluntarios/${id}`, { method: "DELETE" });
+      await authFetch(`http://168.231.88.35:8080/voluntarios/${id}`, { method: "DELETE" });
       setVoluntarios(voluntarios.filter((v) => v.id !== id));
     } catch (error) {
       console.error("Erro ao deletar voluntário:", error);

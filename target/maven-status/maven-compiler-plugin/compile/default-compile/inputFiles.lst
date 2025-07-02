@@ -8,6 +8,7 @@ C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\controller\ValorCo
 C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\controller\VeterinarioController.java
 C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\controller\VoluntarioController.java
 C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\dto\AutheticationDto.java
+C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\dto\LoginResponseDto.java
 C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\dto\RegisterDto.java
 C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\dto\RequestAnimal.java
 C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\dto\RequestBI.java
@@ -24,6 +25,7 @@ C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\exceptionResponse\
 C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\exceptionResponse\ResourceNotFoundException.java
 C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\ExtensaoBackApplication.java
 C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\infra\security\SecurityConfig.java
+C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\infra\security\SecurityFilter.java
 C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\infra\security\TokenService.java
 C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\model\Animal.java
 C:\Users\MARCOS\git\ExtensaoUpVet\src\main\java\br\com\marcos\model\CuidadoAnimal.java

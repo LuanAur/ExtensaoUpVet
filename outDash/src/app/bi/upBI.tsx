@@ -57,7 +57,7 @@ const LancamentoModal: React.FC<LancamentoModalProps> = ({ isOpen, onClose }) =>
 
       console.log("Sending payload:", JSON.stringify(payload));
 
-      const response = await authFetch(`http://localhost:8080/valor`, {
+      const response = await authFetch(`http://168.231.88.35:8080/valor`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
