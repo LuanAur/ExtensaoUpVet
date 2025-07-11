@@ -1,137 +1,220 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { motion, useMotionValue } from "framer-motion";
-import Footer from "./components/footer"; 
+import Footer from "./components/footer";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
+import { ChevronDownIcon, Bars3Icon } from '@heroicons/react/20/solid'
 
-const ONE_SECOND = 1000;
-const AUTO_DELAY = ONE_SECOND * 10;
-const DRAG_BUFFER = 50;
-const SPRING_OPTIONS = {
-  type: "spring",
-  mass: 3,
-  stiffness: 400,
-  damping: 50,
-};
+{/* Menu suspenso mobile estilizado */}
+<div className="md:hidden relative z-50">
+  <Menu>
+    <MenuButton className="inline-flex justify-center items-center gap-2 w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-500">
+      {/* Ícone hamburguer */}
+      <Bars3Icon className="h-5 w-5 text-gray-500" aria-hidden="true" />
+      {/* Texto opcional */}
+      Menu
+      {/* Seta */}
+      <ChevronDownIcon className="h-5 w-5 text-gray-500" aria-hidden="true" />
+    </MenuButton>
+
+    <MenuItems className="absolute right-0 mt-2 w-44 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+      <div className="py-1">
+        {[
+          { href: "#inicio", label: "Início" },
+          { href: "#agenda", label: "Agenda" },
+          { href: "#laser", label: "Laserterapia" },
+          { href: "#estrutura", label: "Quem Somos" },
+          { href: "#contato", label: "Contato" },
+        ].map(({ href, label }) => (
+          <MenuItem key={href}>
+            {({ active }) => (
+              <a
+                href={href}
+                className={`block px-4 py-2 text-sm ${
+                  active ? "bg-teal-100 text-teal-900" : "text-gray-700"
+                }`}
+              >
+                {label}
+              </a>
+            )}
+          </MenuItem>
+        ))}
+      </div>
+    </MenuItems>
+  </Menu>
+</div>
+
 
 const images = [
-  "/res/1.png",
-  "/res/ecohorse.png",
+  {
+    src: "/res/ecohorse.png",
+    title: "EcoVet",
+    subtitle: "Tecnlogia de Ponta!",
+    text: "A SPAI VET em parceria com a EcoVet busca prover assistência veterinária para animais de rua.",
+    button: "CONHEÇA",
+  },
+  {
+    src: "/res/ecodevice.png",
+    title: "GDSSS",
+    subtitle: "VSDFS",
+    text: "LDFSDFSDF.",
+    button: "SAIBA MAIS",
+  },
 ];
 
+const responsive = {
+  all: {
+    breakpoint: { max: 4000, min: 0 },
+    items: 1,
+  },
+  superLargeDesktop: { breakpoint: { max: 4000, min: 1280 }, items: 1 },
+  desktop: { breakpoint: { max: 1280, min: 768 }, items: 1 },
+  tablet: { breakpoint: { max: 768, min: 464 }, items: 1 },
+  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
+};
+
 export default function HomePage() {
-  const [imgIndex, setImgIndex] = useState(0);
-  const dragX = useMotionValue(0);
-
-  useEffect(() => {
-    const intervalRef = setInterval(() => {
-      const x = dragX.get();
-      if (x === 0) {
-        setImgIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-      }
-    }, AUTO_DELAY);
-
-    return () => clearInterval(intervalRef);
-  }, []);
-
-  const onDragEnd = () => {
-    const x = dragX.get();
-    if (x <= -DRAG_BUFFER) {
-      setImgIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    } else if (x >= DRAG_BUFFER) {
-      setImgIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-    }
-  };
-
   return (
-  <div className="flex flex-col ">
-    <div className="relative  flex flex-col">
+    <div className="flex flex-col bg-[#fcda97] min-h-screen">
       {/* Topbar */}
-      <header className="absolute top-0 left-0 w-full z-10 px-6 py-4 flex justify-between items-center  ">
-        <div className=" font-bold text-teal-900"><img src="/res/30.png" alt="Logo" className="h-20"/></div>
-        <nav className="space-x-6 text-sm font-medium text-teal-900">
-          <a href="#" className="hover:underline">Início</a>
-          <a href="#" className="hover:underline">Agenda</a>
-          <a href="#" className="hover:underline">Laserterapia</a>
-          <a href="#" className="hover:underline">Quem Somos</a>
-          <a href="#" className="hover:underline">Contato</a>
+      <header
+        className="w-full z-20 px-4 py-3 flex items-center justify-between
+        md:absolute md:top-0 md:left-0 md:bg-white/5 
+        fixed top-0 left-0 bg-[#fcda97] shadow-md md:shadow-none"
+      >
+        {/* Logo */}
+        <div className="font-bold text-[#452d24]">
+          <img src="/res/logo_s.png" alt="Logo" className="h-16 md:h-20" />
+        </div>
+
+        {/* Navegação desktop */}
+        <nav className="hidden md:flex space-x-4 text-sm font-medium text-teal-900">
+          <a href="#inicio" className="hover:underline">Início</a>
+          <a href="#laser" className="hover:underline">Laserterapia</a>
+          <a href="#contato" className="hover:underline">Contato</a>
         </nav>
+
+        {/* Menu suspenso mobile */}
+          <div className="md:hidden relative z-50">
+            <Menu>
+              <MenuButton className="inline-flex justify-center items-center gap-2 w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-500">
+                <Bars3Icon className="h-5 w-5 text-gray-500" aria-hidden="true" />
+              </MenuButton>
+
+              <MenuItems className="absolute right-0 mt-2 w-44 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+                <div className="py-1">
+                  {[
+                    { href: "#inicio", label: "Início" },
+                    { href: "#agenda", label: "Agenda" },
+                    { href: "#laser", label: "Laserterapia" },
+                    { href: "#estrutura", label: "Quem Somos" },
+                    { href: "#contato", label: "Contato" },
+                  ].map(({ href, label }) => (
+                    <MenuItem key={href}>
+                      {({ active }) => (
+                        <a
+                          href={href}
+                          className={`block px-4 py-2 text-sm ${
+                            active ? "bg-teal-100 text-teal-900" : "text-gray-700"
+                          }`}
+                        >
+                          {label}
+                        </a>
+                      )}
+                    </MenuItem>
+                  ))}
+                </div>
+              </MenuItems>
+            </Menu>
+          </div>
       </header>
 
       {/* Carousel */}
-      <div className="relative overflow-hidden">
-        <motion.div
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          style={{ x: dragX }}
-          animate={{ translateX: `-${imgIndex * 100}%` }}
-          transition={SPRING_OPTIONS}
-          onDragEnd={onDragEnd}
-          className="flex min-h-180 max-height-screen cursor-grab active:cursor-grabbing"
-        >          {/* Tamanho do carrousel /\*/}
-          {images.map((imgSrc, idx) => (
-            <motion.div
-              key={idx}
-              className="relative max-h-3/5 min-w-screen shrink-0 overflow-hidden"
-              style={{
-                backgroundImage: `url(${imgSrc})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center"
-              }}
-              transition={SPRING_OPTIONS}
-            >
-              {imgIndex === idx && (
-                <div className="relative top-1/2 left-1/4 transform -translate-y-1/2 space-y-4 bg-teal-900/60 p-8 text-white max-w-md max-h-3/5">
-                  <h2 className="text-3xl font-extrabold">Nossa Missão</h2>
-                  <h3 className="text-2xl font-bold text-yellow-400">TESTES</h3>
-                  <p>A UpVet em parceria com a EcoVet busca prover assistencia veterinária para animais de rua.</p>
+      <section id="inicio" className="w-full h-screen max-h-[85vh] pt-20 md:pt-0">
+        <Carousel
+          responsive={responsive}
+          autoPlay
+          autoPlaySpeed={10000}
+          infinite
+          swipeable
+          draggable
+          arrows={false}
+          renderDotsOutside={true}
+          containerClass="carousel-container"
+          dotListClass="custom-dot-list-style"
+        >
+          {images.map((img, idx) => (
+            <div key={idx} className="relative w-full h-[80vh] md:h-[85vh]">
+              <img
+                src={img.src}
+                alt={img.title}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center md:justify-start md:pl-20 p-6">
+                <div className="bg-teal-900/70 text-white p-6 rounded-lg max-w-md w-full text-center md:text-left space-y-4">
+                  <h2 className="text-2xl md:text-3xl font-extrabold">{img.title}</h2>
+                  <h3 className="text-xl md:text-2xl font-bold text-yellow-400">{img.subtitle}</h3>
+                  <p className="text-sm md:text-base">{img.text}</p>
                   <button className="bg-yellow-400 text-teal-900 font-bold px-4 py-2 rounded hover:bg-yellow-300 transition">
-                    CONHEÇA O PROJETO
+                    {img.button}
                   </button>
                 </div>
-              )}
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Ponteiros */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setImgIndex(index)}
-              className={`w-2 h-2 rounded-full border-2 ${
-                imgIndex === index
-                  ? "bg-yellow-400 border-yellow-400"
-                  : "bg-white/50 border-white"
-              } transition`}
-            />
-          ))}
-        </div>
-      </div>
-            <section className="w-full bg-[#f8f8f8] py-16 px-8 flex flex-col md:flex-row items-center justify-center gap-12 bg-[url('/res/ecodevice.png')] bg-cover ">
-            
-            {/* Left: Text Content */}
-            <div className="md:w-2/5 translate-x-[-35%] ">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Sobre a ECO Vet</h2>
-              <div className="w-16 h-1 bg-yellow-400 mb-6"></div>
-              <p className="text-gray-800 text-lg text-light-gray leading-relaxed text-justify mb-8">
-              A ECO Vet fabrica e desenvolve equipamentos de terapia, atendendo a todas especialidades veterinárias,
-              portes e espécies de animais.
-              Nossa preocupação é atender com excelência as necessidades dos nossos clientes, oferecendo o que há de
-              mais eficaz e inovador para as diversas áreas da saúde animal.
-              </p>
-              <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-3 px-8 rounded-full transition duration-300">
-                Ver mais
-              </button>
+              </div>
             </div>
+          ))}
+        </Carousel>
+      </section>
 
-          </section>
-    </div>
+      {/* Nossa Estrutura */}
+      <section
+        id="estrutura"
+        className="w-full bg-[#f8f8f8] py-16 px-4 flex flex-col lg:flex-row items-center justify-center gap-8 bg-[url('/res/attempt2.png')] bg-cover"
+      >
+        <div className="w-full lg:w-2/5 px-4 text-center lg:text-left">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nossa Estrutura</h2>
+          <div className="w-16 h-1 bg-yellow-400 mb-6 mx-auto lg:mx-0"></div>
+          <p className="text-gray-800 text-base leading-relaxed text-justify mb-8">
+            Nosso consultório foi construído seguindo as normas do CRMV e da Anvisa.
+            <br /><br />
+            O centro cirúrgico é equipado com o que há de mais moderno na medicina veterinária.
+            Isso significa mais segurança para o seu animalzinho.
+            Nossa equipe é formada por médicos veterinários competentes.
+            Quando o seu melhor amigo é operado aqui o procedimento é realizado com qualidade e segurança de forma acessível.
+          </p>{/* 
+          <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+            Ver mais
+          </button>*/}
+        </div>
+      </section>
+
+      {/* Colaboradores */}
+      <section className="w-full bg-[#f8f8f8] py-16 px-4 flex flex-col items-center justify-center gap-12">
+        <div className="text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Colaboradores</h2>
+          <div className="w-16 h-1 bg-yellow-400 mx-auto mb-6"></div>
+        </div>
+        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-8 w-full">
+          <a href="https://radioita.com.br/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[300px] flex justify-center">
+            <img
+              src="/res/logoradio.png"
+              alt="Logo Rádio"
+              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
+            />
+          </a>
+          <a href="https://www.mpmg.mp.br/portal/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[300px] flex justify-center">
+            <img
+              src="/res/logompmg.png"
+              alt="Logo MPMG"
+              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
+            />
+          </a>
+        </div>
+      </section>
+
       {/* Rodapé */}
-      <footer className="mt-auto">
+      <footer id="contato" className="mt-auto">
         <Footer />
       </footer>
-  </div>
+    </div>
   );
 }
-
