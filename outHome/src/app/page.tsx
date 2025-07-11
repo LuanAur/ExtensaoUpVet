@@ -7,20 +7,23 @@ import { Bars3Icon } from '@heroicons/react/20/solid'
 
 const images = [
   {
-    src: "/res/ecohorse.png",
-    title: "EcoVet",
-    subtitle: "Tecnlogia de Ponta!",
-    text: "A SPAI VET em parceria com a EcoVet busca prover assistência veterinária para animais de rua.",
-    button: "CONHEÇA",
+    src: "/res/slide1.png",
+    title: "SPAI VET",
+    subtitle: "Clínica Veterinária",
+    text: "Buscamos ajudar todos os animais de Itapecerica!",
+    button: "FALE CONOSCO",
+    link: "#contato", 
   },
   {
-    src: "/res/ecodevice.png",
-    title: "GDSSS",
-    subtitle: "VSDFS",
-    text: "LDFSDFSDF.",
-    button: "SAIBA MAIS",
+    src: "/res/ecohorse.png",
+    title: "ECCOVet",
+    subtitle: "Tecnlogia de Ponta!",
+    text: "A SPAI VET utiliza tecnologia da ECCOVet para prover assistência veterinária.",
+    button: "CONHEÇA",
+    link: "#ecovet", 
   },
 ];
+
 
 const responsive = {
   all: {
@@ -39,19 +42,20 @@ export default function HomePage() {
       {/* Topbar */}
       <header
         className="w-full z-20 px-4 py-3 flex items-center justify-between
-        md:absolute md:top-0 md:left-0 md:bg-white/5 
+        md:absolute md:top-0 md:left-0 md:bg-white/1 
         fixed top-0 left-0 bg-[#fcda97] shadow-md md:shadow-none"
       >
         {/* Logo */}
-        <div className="font-bold text-[#452d24]">
+        <div className="font-bold text-[#452d24] pl-0 md:pl-40">
           <img src="/res/logo_s.png" alt="Logo" className="h-16 md:h-20" />
         </div>
 
         {/* Navegação desktop */}
-        <nav className="hidden md:flex space-x-4 text-sm font-medium text-teal-900">
-          <a href="#inicio" className="hover:underline">Início</a>
-          <a href="#laser" className="hover:underline">Laserterapia</a>
-          <a href="#contato" className="hover:underline">Contato</a>
+        <nav className="hidden md:flex space-x-4 text-sm font-big text-[#452d23] text pr-40">
+          <a href="#inicio" className="hover:underline">INÍCIO</a>
+          <a href="#vet" className="hover:underline">VETERINÁRIOS</a>
+          <a href="#ecovet" className="hover:underline">ECCOVET</a>
+          <a href="#contato" className="hover:underline">CONTATO</a>
         </nav>
 
         {/* Menu suspenso mobile */}
@@ -65,7 +69,8 @@ export default function HomePage() {
                 <div className="py-1">
                   {[
                     { href: "#inicio", label: "Início" },
-                    { href: "#laser", label: "Laserterapia" },
+                    { href: "#vet", label: "Veterinários" },
+                    { href: "#ecovet", label: "Laserterapia" },
                     { href: "#contato", label: "Contato" },
                   ].map(({ href, label }) => (
                     <MenuItem key={href}>
@@ -104,24 +109,51 @@ export default function HomePage() {
           {images.map((img, idx) => (
             <div key={idx} className="relative w-full h-[80vh] md:h-[85vh]">
               <img
-                src={img.src}
-                alt={img.title}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+                  src={img.src}
+                  alt={img.title}
+                  className="absolute inset-0 w-full h-full object-cover md:object-cover object-[80%_center]"
+                />
               <div className="absolute inset-0 flex items-center justify-center md:justify-start md:pl-20 p-6">
-                <div className="bg-teal-900/70 text-white p-6 rounded-lg max-w-md w-full text-center md:text-left space-y-4">
+                <div className="bg-[#712211]/70 text-white p-6 rounded-lg max-w-md w-full text-center md:text-left space-y-4">
                   <h2 className="text-2xl md:text-3xl font-extrabold">{img.title}</h2>
                   <h3 className="text-xl md:text-2xl font-bold text-yellow-400">{img.subtitle}</h3>
                   <p className="text-sm md:text-base">{img.text}</p>
-                  <button className="bg-yellow-400 text-teal-900 font-bold px-4 py-2 rounded hover:bg-yellow-300 transition">
-                    {img.button}
-                  </button>
+                  <a
+                      href={img.link}
+                      className="inline-block bg-yellow-400 text-teal-900 font-bold px-4 py-2 rounded hover:bg-yellow-300 transition"
+                    >
+                      {img.button}
+                    </a>
                 </div>
               </div>
             </div>
           ))}
         </Carousel>
       </section>
+        {/* Veterinários */}
+        <section id="vet" className="w-full bg-[#f8f8f8] py-16 px-4 flex flex-col items-center justify-center gap-12 ">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Veterinários</h2>
+            <div className="w-16 h-1 bg-yellow-400 mx-auto mb-6"></div>
+          </div>
+          
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-4xl">
+            <div className="w-full md:w-1/3 flex justify-center">
+              <img
+                src="/res/vet1.png"
+                alt="Isabela Sader"
+                className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full shadow-lg"
+              />
+            </div>
+            <div className="w-full md:w-2/3">
+            <h2 className="text-3xl md:text-2xl font-bold text-gray-900 mb-4">Isabela Sader</h2>
+              <p className="text-gray-800 text-base leading-relaxed text-justify">
+                Graduada em Medicina veterinária, pela UNIFOR-MG.
+                Pós graduanda em Fisiatria veterinária, pelo Instituto Equilibrium.
+              </p>
+            </div>
+          </div>
+        </section>
 
       {/* Nossa Estrutura */}
       <section
@@ -166,6 +198,25 @@ export default function HomePage() {
               className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
             />
           </a>
+        </div>
+      </section>
+      {/* Laserterapia*/}
+      <section
+        id="ecovet"
+        className="w-full bg-[#f8f8f8] py-16 px-4 flex flex-col lg:flex-row items-center justify-center gap-8 bg-[url('/res/ecodevice.png')] bg-cover bg-[65%_center]"
+      >
+        <div className="w-full lg:w-2/5 px-4 text-center lg:text-left">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">A ECCO Vet</h2>
+          <div className="w-16 h-1 bg-yellow-400 mb-6 mx-auto lg:mx-0"></div>
+          <p className="text-gray-800 text-base leading-relaxed text-justify mb-8">
+            A ECCO Vet fabrica e desenvolve equipamentos de terapia, atendendo a todas especialidades veterinárias,
+            portes e espécies de animais.
+            <br></br><br></br>
+            Oferecemos diversos servíços veterinários utilizando seus produtos!
+          </p>
+          <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+            SAIBA MAIS
+          </button>
         </div>
       </section>
 
