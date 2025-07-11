@@ -3,47 +3,7 @@ import Footer from "./components/footer";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
-import { ChevronDownIcon, Bars3Icon } from '@heroicons/react/20/solid'
-
-{/* Menu suspenso mobile estilizado */}
-<div className="md:hidden relative z-50">
-  <Menu>
-    <MenuButton className="inline-flex justify-center items-center gap-2 w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-500">
-      {/* Ícone hamburguer */}
-      <Bars3Icon className="h-5 w-5 text-gray-500" aria-hidden="true" />
-      {/* Texto opcional */}
-      Menu
-      {/* Seta */}
-      <ChevronDownIcon className="h-5 w-5 text-gray-500" aria-hidden="true" />
-    </MenuButton>
-
-    <MenuItems className="absolute right-0 mt-2 w-44 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
-      <div className="py-1">
-        {[
-          { href: "#inicio", label: "Início" },
-          { href: "#agenda", label: "Agenda" },
-          { href: "#laser", label: "Laserterapia" },
-          { href: "#estrutura", label: "Quem Somos" },
-          { href: "#contato", label: "Contato" },
-        ].map(({ href, label }) => (
-          <MenuItem key={href}>
-            {({ active }) => (
-              <a
-                href={href}
-                className={`block px-4 py-2 text-sm ${
-                  active ? "bg-teal-100 text-teal-900" : "text-gray-700"
-                }`}
-              >
-                {label}
-              </a>
-            )}
-          </MenuItem>
-        ))}
-      </div>
-    </MenuItems>
-  </Menu>
-</div>
-
+import { Bars3Icon } from '@heroicons/react/20/solid'
 
 const images = [
   {
@@ -105,9 +65,7 @@ export default function HomePage() {
                 <div className="py-1">
                   {[
                     { href: "#inicio", label: "Início" },
-                    { href: "#agenda", label: "Agenda" },
                     { href: "#laser", label: "Laserterapia" },
-                    { href: "#estrutura", label: "Quem Somos" },
                     { href: "#contato", label: "Contato" },
                   ].map(({ href, label }) => (
                     <MenuItem key={href}>
