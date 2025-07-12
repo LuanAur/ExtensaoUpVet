@@ -23,6 +23,8 @@ export default function LoginPage() {
         throw new Error("Login falhou");
       }
 
+      
+
       const data = await res.json();
       localStorage.setItem("token", data.token); 
       localStorage.setItem("role", data.role);

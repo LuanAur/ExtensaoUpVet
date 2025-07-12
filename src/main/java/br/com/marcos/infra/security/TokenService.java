@@ -26,7 +26,7 @@ public class TokenService {
 			 String token = JWT.create().
 					 withIssuer("auth_api")
 					 .withSubject(user.getNome())
-					 .withExpiresAt(generateExpiretDate())
+					 .withExpiresAt(generateExpiretDateTest())
 					 .sign(algorithm);
 			 return token;
 			
@@ -53,6 +53,10 @@ public class TokenService {
 	
 	private Instant generateExpiretDate() {
         return LocalDateTime.now().plusHours(2).toInstant(ZoneOffset.of("-03:00"));
+	}
+	
+	private Instant generateExpiretDateTest() {
+        return LocalDateTime.now().plusSeconds(10).toInstant(ZoneOffset.of("-03:00"));
 	}
 
 }

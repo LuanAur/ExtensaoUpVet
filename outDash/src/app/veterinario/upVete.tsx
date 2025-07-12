@@ -47,6 +47,10 @@ const VeterinarioModal: React.FC<VeterinarioModalProps> = ({ isOpen, onClose }) 
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+        //TOKEN EXPIRE
+      if(response.status == 401){
+        window.location.replace('http://168.231.88.35:8080/aut/login');
+      }
 
       if (!response.ok) throw new Error("Erro ao cadastrar veterinário.");
 

@@ -38,13 +38,19 @@ const VoluntarioModal: React.FC<VoluntarioModalProps> = ({ isOpen, onClose }) =>
     }
 
     try {
-      const response = await authFetch("http://168.231.88.35:8080/voluntarios", {
+      //http://localhost:8080/voluntarios
+      const response = await authFetch("http://localhost:8080/voluntarios", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (!response.ok) throw new Error("Erro ao cadastrar voluntário.");
+
+      //TOKEN EXPIRE
+      if(response.status == 403){
+        window.location.replace('http://localhost:8080/aut/login');
+      }
 
       const result = await response.json();
       console.log("Success:", result);

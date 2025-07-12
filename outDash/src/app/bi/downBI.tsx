@@ -60,6 +60,9 @@ const ListFluxoCaixa: React.FC = () => {
     fetchLancamentos();
   }, []);
 
+
+
+
   const fetchLancamentos = async () => {
     setLoading(true);
     try {
@@ -95,11 +98,16 @@ const ListFluxoCaixa: React.FC = () => {
     const updatedLancamento = e.newData as Lancamento;
   
     try {
-      await authFetch(`http://168.231.88.35:8080/valor/${updatedLancamento.id}`, {
+      const response = await authFetch(`http://168.231.88.35:8080/valor/${updatedLancamento.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedLancamento),
       });
+     
+      //TOKEN EXPIRE
+      if(response.status == 401){
+        window.location.replace('http://168.231.88.35:8080/aut/login');
+      }
   
       const updatedList = [...lancamentos];
       updatedList[e.index] = updatedLancamento;
@@ -113,13 +121,20 @@ const ListFluxoCaixa: React.FC = () => {
 
   const deleteLancamento = async (id: number) => {
     try {
-      await authFetch(`http://168.231.88.35:8080/valor/${id}`, {
+     const response =  await authFetch(`http://168.231.88.35:8080/valor/${id}`, {
         method: "DELETE",
       });
       setLancamentos(lancamentos.filter((l) => l.id !== id));
+      //TOKEN EXPIRE
+      if(response.status == 401){
+        window.location.replace('http://168.231.88.35:8080/aut/login');
+      }
+
     } catch (error) {
       console.error("Erro ao deletar lançamento:", error);
     }
+
+    
   };
   
 

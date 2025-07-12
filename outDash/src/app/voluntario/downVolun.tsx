@@ -59,8 +59,16 @@ const ListVolun: React.FC = () => {
     setLoading(true);
     try {
       const response = await authFetch("http://168.231.88.35:8080/voluntarios");
+
+      //TOKEN EXPIRE
+      if(response.status == 401){
+        window.location.replace('http://168.231.88.35:8080/aut/login');
+      }
+
       const data = await response.json();
       setVoluntarios(data);
+
+      
     } catch (err: unknown) {
       if (err instanceof Error) {
         setError(err.message);
@@ -75,11 +83,16 @@ const ListVolun: React.FC = () => {
   const onRowEditComplete = async (e: DataTableRowEditCompleteEvent) => {
     const updatedVoluntario = e.newData as Voluntario;
     try {
-      await authFetch(`http://168.231.88.35:8080/voluntarios/${updatedVoluntario.id}`, {
+      const response = await authFetch(`http://168.231.88.35:8080/voluntarios/${updatedVoluntario.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedVoluntario),
       });
+
+      //TOKEN EXPIRE
+      if(response.status == 401){
+        window.location.replace('http://168.231.88.35:8080/aut/login');
+      }
 
       const updatedList = [...voluntarios];
       updatedList[e.index] = updatedVoluntario;
@@ -92,7 +105,13 @@ const ListVolun: React.FC = () => {
 
   const deleteVoluntario = async (id: number) => {
     try {
-      await authFetch(`http://168.231.88.35:8080/voluntarios/${id}`, { method: "DELETE" });
+      const response = await authFetch(`http://168.231.88.35:8080/voluntarios/${id}`, { method: "DELETE" });
+
+      //TOKEN EXPIRE
+      if(response.status == 401){
+        window.location.replace('http://168.231.88.35:8080/aut/login');
+      }
+
       setVoluntarios(voluntarios.filter((v) => v.id !== id));
     } catch (error) {
       console.error("Erro ao deletar voluntário:", error);

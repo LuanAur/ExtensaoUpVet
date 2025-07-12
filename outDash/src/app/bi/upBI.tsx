@@ -56,12 +56,18 @@ const LancamentoModal: React.FC<LancamentoModalProps> = ({ isOpen, onClose }) =>
       };
 
       console.log("Sending payload:", JSON.stringify(payload));
-
-      const response = await authFetch(`http://168.231.88.35:8080/valor`, {
+//http://localhost:8080/valor
+      const response = await authFetch(`http://localhost:8080/valor`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
+
+      //token
+      if (response.status === 403) {
+    window.location.replace('http://localhost:8080/aut/login');
+    return;
+  }
 
       if (!response.ok) throw new Error("Erro ao registrar lançamento.");
 

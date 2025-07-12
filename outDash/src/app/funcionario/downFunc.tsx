@@ -69,6 +69,11 @@ const ListFunc: React.FC = () => {
           const text = await response.text(); // Lê o corpo cru para ver se há alguma dica
           throw new Error(`Erro ${response.status}: ${text || response.statusText}`);
         }
+
+        //TOKEN EXPIRE
+      if(response.status == 401){
+        window.location.replace('http://168.231.88.35:8080/aut/login');
+      }
     
         const data = await response.json();
         setFuncionarios(data);
@@ -88,12 +93,15 @@ const ListFunc: React.FC = () => {
   const onRowEditComplete = async (e: DataTableRowEditCompleteEvent) => {
     const updatedFuncionario = e.newData as Funcionario;
     try {
-      await authFetch(`http://168.231.88.35:8080/funcionario/${updatedFuncionario.id}`, {
+      const response = await authFetch(`http://168.231.88.35:8080/funcionario/${updatedFuncionario.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedFuncionario),
       });
-
+      //TOKEN EXPIRE
+      if(response.status == 401){
+        window.location.replace('http://168.231.88.35:8080/aut/login');
+      }
       const updatedList = [...funcionarios];
       updatedList[e.index] = updatedFuncionario;
       setFuncionarios(updatedList);
@@ -105,8 +113,12 @@ const ListFunc: React.FC = () => {
 
   const deleteFuncionario = async (id: number) => {
     try {
-      await authFetch(`http://168.231.88.35:8080/funcionario/${id}`, { method: "DELETE" });
+      const response = await authFetch(`http://168.231.88.35:8080/funcionario/${id}`, { method: "DELETE" });
       setFuncionarios(funcionarios.filter((f) => f.id !== id));
+      //TOKEN EXPIRE
+      if(response.status == 401){
+        window.location.replace('http://168.231.88.35:8080/aut/login');
+      }
     } catch (error) {
       console.error("Erro ao deletar funcionário:", error);
     }

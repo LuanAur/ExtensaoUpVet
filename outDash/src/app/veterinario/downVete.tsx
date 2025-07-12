@@ -67,6 +67,12 @@ const ListVeterinarios: React.FC = () => {
       const response = await authFetch("http://168.231.88.35:8080/veterinarios");
       const data = await response.json();
       setVeterinarios(data);
+      //TOKEN EXPIRE
+      if(response.status == 401){
+        window.location.replace('http://168.231.88.35:8080/aut/login');
+      }
+
+
     } catch (err: unknown) {
       if (err instanceof Error) {
         setError(err.message);
@@ -81,12 +87,15 @@ const ListVeterinarios: React.FC = () => {
   const onRowEditComplete = async (e: DataTableRowEditCompleteEvent) => {
     const updatedVeterinario = e.newData as Veterinario;
     try {
-      await authFetch(`http://168.231.88.35:8080/veterinarios/${updatedVeterinario.id}`, {
+      const response = await authFetch(`http://168.231.88.35:8080/veterinarios/${updatedVeterinario.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedVeterinario),
       });
-
+      //TOKEN EXPIRE
+      if(response.status == 401){
+        window.location.replace('http://168.231.88.35:8080/aut/login');
+      }
       const updatedList = [...veterinarios];
       updatedList[e.index] = updatedVeterinario;
       setVeterinarios(updatedList);
@@ -98,8 +107,13 @@ const ListVeterinarios: React.FC = () => {
 
   const deleteVeterinario = async (id: number) => {
     try {
-      await authFetch(`http://168.231.88.35:8080/veterinarios/${id}`, { method: "DELETE" });
+      const response = await authFetch(`http://168.231.88.35:8080/veterinarios/${id}`, { method: "DELETE" });
       setVeterinarios(veterinarios.filter((v) => v.id !== id));
+
+      //TOKEN EXPIRE
+      if(response.status == 401){
+        window.location.replace('http://168.231.88.35:8080/aut/login');
+      }
     } catch (error) {
       console.error("Erro ao deletar veterinário:", error);
     }
