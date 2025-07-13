@@ -142,6 +142,42 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-4xl">
             <div className="w-full md:w-1/3 flex justify-center">
               <img
+                src="/res/vet2.png"
+                alt="Maria Luiza"
+                className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full shadow-lg"
+              />
+            </div>
+            <div className="w-full md:w-2/3">
+            <h2 className="text-3xl md:text-2xl font-bold text-gray-900 mb-4"> Maria Luiza</h2>
+              <p className="text-gray-800 text-base leading-relaxed text-justify">
+               Graduada em Medicina Veterinária há 7 anos. Especializando-se em Oncologia Veterinária e 
+               atuando com terapias complementares, como fototerapia e laserterapia.
+              </p>
+            </div>
+          </div>
+
+           <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-4xl">
+            <div className="w-full md:w-1/3 flex justify-center">
+              <img
+                src="/res/Vet3.png"
+                alt="Daniel Cunha"
+                className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full shadow-lg"
+              />
+            </div>
+            <div className="w-full md:w-2/3">
+            <h2 className="text-3xl md:text-2xl font-bold text-gray-900 mb-4"> Daniel Cunha</h2>
+              <p className="text-gray-800 text-base leading-relaxed text-justify">
+               Formado em Medicina Veterinária, com sólida experiência em Cirurgia Geral Veterinária. 
+               Atua com foco em procedimentos seguros, eficazes e no bem-estar dos animais, garantindo 
+               conforto e qualidade em todas as etapas do atendimento.
+              </p>
+            </div>
+          </div>
+
+
+           <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-4xl">
+            <div className="w-full md:w-1/3 flex justify-center">
+              <img
                 src="/res/vet1.png"
                 alt="Isabela Sader"
                 className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full shadow-lg"
@@ -186,17 +222,17 @@ export default function HomePage() {
           <div className="w-16 h-1 bg-yellow-400 mx-auto mb-6"></div>
         </div>
         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-8 w-full">
-          <a href="https://radioita.com.br/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[300px] flex justify-center">
-            <img
-              src="/res/logoradio.png"
-              alt="Logo Rádio"
-              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
-            />
-          </a>
           <a href="https://www.mpmg.mp.br/portal/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[300px] flex justify-center">
             <img
               src="/res/logompmg.png"
               alt="Logo MPMG"
+              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
+            />
+          </a>
+           <a href="https://www.instagram.com/supermercadofariaoficial/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[300px] flex justify-center">
+            <img
+              src="/res/fariaLogo.png"
+              alt="Logo Rádio"
               className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
             />
           </a>

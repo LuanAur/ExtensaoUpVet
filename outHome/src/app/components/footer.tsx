@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center sm:text-left">
         {/* ONG Logo + Description */}
         <div className="flex flex-col items-center sm:items-start">
-          <Image src="/res/logo_m.png" alt="Logo UpVet" width={250} height={100} />
+          <Image src="/res/logo_s.png" alt="Logo UpVet" width={250} height={100} />
           <p className="mt-4 text-sm"></p>
         </div>
 
