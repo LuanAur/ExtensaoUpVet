@@ -19,4 +19,11 @@ api:
    security:
      token:
        secret: ${JWT_SECRET:14j06y25t}
+server:
+  ssl:
+   enabled: true                    # Corrigido aqui: 'enabled' e indentação
+   key-store: file:/home/keystore.p12
+   key-store-password: Pass9500       # Coloque a senha correta aqui
+   key-store-type: PKCS12
+   key-alias: springboot
 
