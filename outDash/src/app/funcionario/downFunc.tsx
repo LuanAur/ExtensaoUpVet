@@ -71,7 +71,7 @@ const ListFunc: React.FC = () => {
         }
 
         //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
     
@@ -99,7 +99,7 @@ const ListFunc: React.FC = () => {
         body: JSON.stringify(updatedFuncionario),
       });
       //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
       const updatedList = [...funcionarios];
@@ -116,7 +116,7 @@ const ListFunc: React.FC = () => {
       const response = await authFetch(`http://168.231.88.35:8080/funcionario/${id}`, { method: "DELETE" });
       setFuncionarios(funcionarios.filter((f) => f.id !== id));
       //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
     } catch (error) {

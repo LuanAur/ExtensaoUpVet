@@ -105,7 +105,7 @@ const ListFluxoCaixa: React.FC = () => {
       });
      
       //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
   
@@ -126,7 +126,7 @@ const ListFluxoCaixa: React.FC = () => {
       });
       setLancamentos(lancamentos.filter((l) => l.id !== id));
       //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
 

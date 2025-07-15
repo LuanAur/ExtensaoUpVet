@@ -47,7 +47,7 @@ const FuncionarioModal: React.FC<FuncionarioModalProps> = ({ isOpen, onClose }) 
         body: JSON.stringify({ ...formData, salario: Number(salario) }),
       });
       //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
       if (!response.ok) throw new Error("Erro ao cadastrar funcionário.");

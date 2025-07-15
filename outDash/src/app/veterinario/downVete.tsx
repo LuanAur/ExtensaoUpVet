@@ -68,7 +68,7 @@ const ListVeterinarios: React.FC = () => {
       const data = await response.json();
       setVeterinarios(data);
       //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
 
@@ -93,7 +93,7 @@ const ListVeterinarios: React.FC = () => {
         body: JSON.stringify(updatedVeterinario),
       });
       //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
       const updatedList = [...veterinarios];
@@ -111,7 +111,7 @@ const ListVeterinarios: React.FC = () => {
       setVeterinarios(veterinarios.filter((v) => v.id !== id));
 
       //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
     } catch (error) {

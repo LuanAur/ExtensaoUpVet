@@ -232,7 +232,28 @@ export default function HomePage() {
            <a href="https://www.instagram.com/supermercadofariaoficial/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[300px] flex justify-center">
             <img
               src="/res/fariaLogo.png"
-              alt="Logo Rádio"
+              alt="supermercado faria"
+              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
+            />
+          </a>
+          <a href="https://itapecerica.mg.gov.br/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
+            <img
+              src="/res/itapecericaLogo.png"
+              alt="prefeitura itapecerica"
+              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
+            />
+          </a>
+           <a href="https://www.laboratoriocentral.com.br/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
+            <img
+              src="/res/laboratorioLogo.png"
+              alt="laboratorio central"
+              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
+            />
+          </a>
+           <a href="https://www.laboratoriocentral.com.br/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
+            <img
+              src="/res/quatree.png"
+              alt="quatree"
               className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
             />
           </a>

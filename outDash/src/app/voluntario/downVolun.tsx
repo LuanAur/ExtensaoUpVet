@@ -61,7 +61,7 @@ const ListVolun: React.FC = () => {
       const response = await authFetch("http://168.231.88.35:8080/voluntarios");
 
       //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
 
@@ -90,7 +90,7 @@ const ListVolun: React.FC = () => {
       });
 
       //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
 
@@ -108,7 +108,7 @@ const ListVolun: React.FC = () => {
       const response = await authFetch(`http://168.231.88.35:8080/voluntarios/${id}`, { method: "DELETE" });
 
       //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
 

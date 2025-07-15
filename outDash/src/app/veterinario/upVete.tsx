@@ -48,7 +48,7 @@ const VeterinarioModal: React.FC<VeterinarioModalProps> = ({ isOpen, onClose }) 
         body: JSON.stringify(formData),
       });
         //TOKEN EXPIRE
-      if(response.status == 401){
+      if(response.status == 403){
         window.location.replace('http://168.231.88.35:8080/aut/login');
       }
 
