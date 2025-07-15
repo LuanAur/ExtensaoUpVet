@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { FaInstagram, FaFacebookF, FaYoutube, FaWhatsapp, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import { FaWhatsapp, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -50,7 +50,7 @@ export default function Footer() {
   );
 }
 
-        {/* Redes sociais 
+        {/* Redes sociais FaInstagram, FaFacebookF, FaYoutube,
         <div>
           <h2 className="text-xl font-semibold mb-2">Siga nas redes</h2>
           <div className="h-1 w-10 bg-yellow-500 mb-4" />
