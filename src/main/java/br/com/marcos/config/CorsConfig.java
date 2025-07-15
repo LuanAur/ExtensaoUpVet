@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Permite todas as rotas
-                		.allowedOrigins("http://localhost:3000")   // Permite chamadas do frontend
+                		.allowedOrigins("https://168.231.88.35:3000", "https://admin.spai.org.br","https://admin.spai.org.br/")   // Permite chamadas do frontend
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
                         .allowedHeaders("Authorization", "Content-Type", "X-Requested-With");
                        // .allowCredentials(true); // Permite envio de cookies/sessões

@@ -142,7 +142,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-4xl">
             <div className="w-full md:w-1/3 flex justify-center">
               <img
-                src="/res/vet2.png"
+                src="/res/Vet2.png"
                 alt="Maria Luiza"
                 className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full shadow-lg"
               />
@@ -217,10 +217,17 @@ export default function HomePage() {
 
       {/* Colaboradores */}
       <section className="w-full bg-[#f8f8f8] py-16 px-4 flex flex-col items-center justify-center gap-12">
-        <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Colaboradores</h2>
-          <div className="w-16 h-1 bg-yellow-400 mx-auto mb-6"></div>
+        <div className="inline-flex items-center justify-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Amigos dos 
+           
+          </h2>
+           <img
+              src="/res/patas.png"
+              alt="Patas"
+              className="w-20 h-auto object-contain ml-2"
+            />
         </div>
+        <div className="w-16 h-1 bg-yellow-400 mx-auto mb-6"></div>
         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-8 w-full">
           <a href="https://www.mpmg.mp.br/portal/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[300px] flex justify-center">
             <img
@@ -238,7 +245,7 @@ export default function HomePage() {
           </a>
           <a href="https://itapecerica.mg.gov.br/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
             <img
-              src="/res/itapecericaLogo.png"
+              src="/res/ItapecericaLogo.png"
               alt="prefeitura itapecerica"
               className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
             />
@@ -254,6 +261,13 @@ export default function HomePage() {
             <img
               src="/res/quatree.png"
               alt="quatree"
+              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
+            />
+          </a>
+            <a href="https://www.laboratoriocentral.com.br/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
+            <img
+              src="/res/agrosid.png"
+              alt="agrosid"
               className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
             />
           </a>
