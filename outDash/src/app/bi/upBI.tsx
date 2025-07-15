@@ -56,8 +56,8 @@ const LancamentoModal: React.FC<LancamentoModalProps> = ({ isOpen, onClose }) =>
       };
 
       console.log("Sending payload:", JSON.stringify(payload));
-//http://localhost:8080/valor
-      const response = await authFetch(`http://localhost:8080/valor`, {
+//https://localhost:8080/valor
+      const response = await authFetch(`https://localhost:8080/valor`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -65,7 +65,7 @@ const LancamentoModal: React.FC<LancamentoModalProps> = ({ isOpen, onClose }) =>
 
       //token
       if (response.status === 403) {
-    window.location.replace('http://localhost:8080/aut/login');
+    window.location.replace('https://localhost:8080/aut/login');
     return;
   }
 

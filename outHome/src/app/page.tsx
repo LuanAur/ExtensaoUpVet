@@ -218,7 +218,7 @@ export default function HomePage() {
       {/* Colaboradores */}
       <section className="w-full bg-[#f8f8f8] py-16 px-4 flex flex-col items-center justify-center gap-12">
         <div className="inline-flex items-center justify-center mb-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Amigos dos 
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Amigos dos Pets
            
           </h2>
            <img
@@ -236,10 +236,38 @@ export default function HomePage() {
               className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
             />
           </a>
+          <a href="https://www.instagram.com/agrosid_/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
+            <img
+              src="/res/agrosid.png"
+              alt="agrosid"
+              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
+            />
+          </a>
+          <a href="https://www.laboratoriocentral.com.br/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
+            <img
+              src="/res/laboratorioLogo.png"
+              alt="laboratorio central"
+              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
+            />
+          </a>
            <a href="https://www.instagram.com/supermercadofariaoficial/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[300px] flex justify-center">
             <img
               src="/res/fariaLogo.png"
               alt="supermercado faria"
+              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
+            />
+          </a>
+          <a href="https://igepp.org/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
+            <img
+              src="/res/igep.png"
+              alt="Vila"
+              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
+            />
+          </a>
+          <a href="https://www.soniknet.com/index.php/itapecerica/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
+            <img
+              src="/res/gottagofast.png"
+              alt="Vila"
               className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
             />
           </a>
@@ -250,24 +278,24 @@ export default function HomePage() {
               className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
             />
           </a>
-           <a href="https://www.laboratoriocentral.com.br/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
-            <img
-              src="/res/laboratorioLogo.png"
-              alt="laboratorio central"
-              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
-            />
-          </a>
-           <a href="https://www.laboratoriocentral.com.br/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
+           <a href="https://www.quatreepet.com.br/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
             <img
               src="/res/quatree.png"
               alt="quatree"
               className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
             />
           </a>
-            <a href="https://www.laboratoriocentral.com.br/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
+           <a href="https://odontocompany.com/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
             <img
-              src="/res/agrosid.png"
-              alt="agrosid"
+              src="/res/logoodonto.png"
+              alt="Odontologia"
+              className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
+            />
+          </a>
+          <a href="https://www.instagram.com/vilatamandua/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-[45%] max-w-[190px] flex justify-center">
+            <img
+              src="/res/logovila.png"
+              alt="Vila"
               className="w-full h-auto object-contain transition-transform duration-200 hover:scale-105"
             />
           </a>
