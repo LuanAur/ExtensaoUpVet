@@ -30,7 +30,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
             .csrf(csrf -> csrf.disable())
-            .cors(cors -> {}) // ✅ habilita CORS com config abaixo
+            .cors(cors -> cors.configurationSource(corsConfigurationSource())) // ✅ habilita CORS com config abaixo
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(HttpMethod.POST, "/auth/login", "/auth/register").permitAll()
@@ -46,11 +46,22 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOriginPatterns(List.of("http://168.231.88.35:3000", "https://168.231.88.35:3000","http://localhost:3000"));
+        config.setAllowedOriginPatterns(List.of("http://168.231.88.35:3000", 
+        "https://168.231.88.35:3000",
+        "http://localhost:3000",
+         "https://admin.spai.org.br",
+         "https://localhost:3000",
+         "https://spai.org.br"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        config.setAllowedHeaders(List.of("Authorization", "Content-Type"));
+        config.setAllowedHeaders(List.of("Authorization", "Content-Type",
+        "X-Requested-With",
+        "X-Forwarded-For",
+        "X-Forwarded-Proto",
+        "X-Forwarded-Port",
+        "Origin",
+        "Accept"));
         config.setAllowCredentials(true); // ✅ permite cookies e headers com credenciais
-
+       config.setExposedHeaders(List.of("Authorization"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
         return source;

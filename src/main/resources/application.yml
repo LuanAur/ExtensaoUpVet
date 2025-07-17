@@ -12,7 +12,10 @@ spring:
       ddl-auto: update
     generate-ddl: true
     show-sql: true
-loggin:
+  security:
+    csrf:
+      enabled : false
+logging:
  level:
   br.com.marcos: DEBUG
 api:
@@ -20,10 +23,16 @@ api:
      token:
        secret: ${JWT_SECRET:14j06y25t}
 server:
+  forward-headers-strategy : framework
+  tomcat:
+    remoteip:
+      remote-ip-header : x-forwarded-for
+      protocol-header: x-forwarded-proto
   ssl:
    enabled: true                    # Corrigido aqui: 'enabled' e indentação
    key-store: file:/home/keystore.p12
    key-store-password: Pass9500       # Coloque a senha correta aqui
    key-store-type: PKCS12
    key-alias: springboot
+  
 
