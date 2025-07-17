@@ -62,7 +62,7 @@ const ListFunc: React.FC = () => {
     const fetchFuncionarios = async () => {
       setLoading(true);
       try {
-        const response = await authFetch("https://168.231.88.35:8080/funcionario");
+        const response = await authFetch("http://168.231.88.35:8080/funcionario");
     
         if (!response.ok) {
           // Adiciona log de diagnóstico
@@ -72,7 +72,7 @@ const ListFunc: React.FC = () => {
 
         //TOKEN EXPIRE
       if(response.status == 403){
-        window.location.replace('https://168.231.88.35:8080/aut/login');
+        window.location.replace('http://168.231.88.35:8080/aut/login');
       }
     
         const data = await response.json();
@@ -93,14 +93,14 @@ const ListFunc: React.FC = () => {
   const onRowEditComplete = async (e: DataTableRowEditCompleteEvent) => {
     const updatedFuncionario = e.newData as Funcionario;
     try {
-      const response = await authFetch(`https://168.231.88.35:8080/funcionario/${updatedFuncionario.id}`, {
+      const response = await authFetch(`http://168.231.88.35:8080/funcionario/${updatedFuncionario.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedFuncionario),
       });
       //TOKEN EXPIRE
       if(response.status == 403){
-        window.location.replace('https://168.231.88.35:8080/aut/login');
+        window.location.replace('http://168.231.88.35:8080/aut/login');
       }
       const updatedList = [...funcionarios];
       updatedList[e.index] = updatedFuncionario;
@@ -113,11 +113,11 @@ const ListFunc: React.FC = () => {
 
   const deleteFuncionario = async (id: number) => {
     try {
-      const response = await authFetch(`https://168.231.88.35:8080/funcionario/${id}`, { method: "DELETE" });
+      const response = await authFetch(`http://168.231.88.35:8080/funcionario/${id}`, { method: "DELETE" });
       setFuncionarios(funcionarios.filter((f) => f.id !== id));
       //TOKEN EXPIRE
       if(response.status == 403){
-        window.location.replace('https://168.231.88.35:8080/aut/login');
+        window.location.replace('http://168.231.88.35:8080/aut/login');
       }
     } catch (error) {
       console.error("Erro ao deletar funcionário:", error);

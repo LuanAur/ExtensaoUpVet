@@ -11,7 +11,7 @@ export default function LoginPage() {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch("https://168.231.88.35:8080/auth/login", {
+      const res = await fetch("https://spai.org.br/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

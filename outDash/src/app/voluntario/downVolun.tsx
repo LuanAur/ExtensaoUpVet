@@ -58,11 +58,11 @@ const ListVolun: React.FC = () => {
   const fetchVoluntarios = async () => {
     setLoading(true);
     try {
-      const response = await authFetch("https://168.231.88.35:8080/voluntarios");
+      const response = await authFetch("http://168.231.88.35:8080/voluntarios");
 
       //TOKEN EXPIRE
       if(response.status == 403){
-        window.location.replace('https://168.231.88.35:8080/aut/login');
+        window.location.replace('http://168.231.88.35:8080/aut/login');
       }
 
       const data = await response.json();
@@ -83,7 +83,7 @@ const ListVolun: React.FC = () => {
   const onRowEditComplete = async (e: DataTableRowEditCompleteEvent) => {
     const updatedVoluntario = e.newData as Voluntario;
     try {
-      const response = await authFetch(`https://168.231.88.35:8080/voluntarios/${updatedVoluntario.id}`, {
+      const response = await authFetch(`http://168.231.88.35:8080/voluntarios/${updatedVoluntario.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedVoluntario),
@@ -91,7 +91,7 @@ const ListVolun: React.FC = () => {
 
       //TOKEN EXPIRE
       if(response.status == 403){
-        window.location.replace('https://168.231.88.35:8080/aut/login');
+        window.location.replace('http://168.231.88.35:8080/aut/login');
       }
 
       const updatedList = [...voluntarios];
@@ -105,11 +105,11 @@ const ListVolun: React.FC = () => {
 
   const deleteVoluntario = async (id: number) => {
     try {
-      const response = await authFetch(`https://168.231.88.35:8080/voluntarios/${id}`, { method: "DELETE" });
+      const response = await authFetch(`http://168.231.88.35:8080/voluntarios/${id}`, { method: "DELETE" });
 
       //TOKEN EXPIRE
       if(response.status == 403){
-        window.location.replace('https://168.231.88.35:8080/aut/login');
+        window.location.replace('http://168.231.88.35:8080/aut/login');
       }
 
       setVoluntarios(voluntarios.filter((v) => v.id !== id));
