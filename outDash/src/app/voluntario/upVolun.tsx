@@ -38,8 +38,8 @@ const VoluntarioModal: React.FC<VoluntarioModalProps> = ({ isOpen, onClose }) =>
     }
 
     try {
-      //http://168.231.88.35:8080/voluntarios
-      const response = await authFetch("http://168.231.88.35:8080/voluntarios", {
+      //https://admin.spai.org.br/voluntarios
+      const response = await authFetch("https://admin.spai.org.br/api/voluntarios", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -49,7 +49,7 @@ const VoluntarioModal: React.FC<VoluntarioModalProps> = ({ isOpen, onClose }) =>
 
       //TOKEN EXPIRE
       if(response.status == 403){
-        window.location.replace('http://168.231.88.35:8080/auth/login');
+        window.location.replace('https://admin.spai.org.br/api/auth/login');
       }
 
       const result = await response.json();

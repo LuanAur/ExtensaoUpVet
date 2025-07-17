@@ -24,7 +24,7 @@ export default function RegisterPage() {
   useEffect(() => {
     const fetchFuncionarios = async () => {
       try {
-        const res = await authFetch("http://168.231.88.35:8080/funcionario");
+        const res = await authFetch("https://admin.spai.org.br/api/funcionario");
         const data = await res.json();
         setFuncionarios(data);
       } catch (error) {
@@ -43,7 +43,7 @@ export default function RegisterPage() {
     }
 
     try {
-      const res = await fetch("http://168.231.88.35:8080/auth/register", {
+      const res = await fetch("https://admin.spai.org.br/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

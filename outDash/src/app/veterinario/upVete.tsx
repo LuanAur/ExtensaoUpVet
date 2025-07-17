@@ -42,14 +42,14 @@ const VeterinarioModal: React.FC<VeterinarioModalProps> = ({ isOpen, onClose }) 
     }
 
     try {
-      const response = await authFetch("http://168.231.88.35:8080/veterinarios", {
+      const response = await authFetch("https://admin.spai.org.br/api/veterinarios", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
         //TOKEN EXPIRE
       if(response.status == 403){
-        window.location.replace('http://168.231.88.35:8080/aut/login');
+        window.location.replace('https://admin.spai.org.br/api/auth/login');
       }
 
       if (!response.ok) throw new Error("Erro ao cadastrar veterinário.");

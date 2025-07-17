@@ -64,12 +64,12 @@ const ListVeterinarios: React.FC = () => {
   const fetchVeterinarios = async () => {
     setLoading(true);
     try {
-      const response = await authFetch("http://168.231.88.35:8080/veterinarios");
+      const response = await authFetch("https://admin.spai.org.br/api/veterinarios");
       const data = await response.json();
       setVeterinarios(data);
       //TOKEN EXPIRE
       if(response.status == 403){
-        window.location.replace('http://168.231.88.35:8080/aut/login');
+        window.location.replace('https://admin.spai.org.br/api/auth/login');
       }
 
 
@@ -87,14 +87,14 @@ const ListVeterinarios: React.FC = () => {
   const onRowEditComplete = async (e: DataTableRowEditCompleteEvent) => {
     const updatedVeterinario = e.newData as Veterinario;
     try {
-      const response = await authFetch(`http://168.231.88.35:8080/veterinarios/${updatedVeterinario.id}`, {
+      const response = await authFetch(`https://admin.spai.org.br/api/veterinarios/${updatedVeterinario.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedVeterinario),
       });
       //TOKEN EXPIRE
       if(response.status == 403){
-        window.location.replace('http://168.231.88.35:8080/aut/login');
+        window.location.replace('https://admin.spai.org.br/api/auth/login');
       }
       const updatedList = [...veterinarios];
       updatedList[e.index] = updatedVeterinario;
@@ -107,12 +107,12 @@ const ListVeterinarios: React.FC = () => {
 
   const deleteVeterinario = async (id: number) => {
     try {
-      const response = await authFetch(`http://168.231.88.35:8080/veterinarios/${id}`, { method: "DELETE" });
+      const response = await authFetch(`https://admin.spai.org.br/api/veterinarios/${id}`, { method: "DELETE" });
       setVeterinarios(veterinarios.filter((v) => v.id !== id));
 
       //TOKEN EXPIRE
       if(response.status == 403){
-        window.location.replace('http://168.231.88.35:8080/aut/login');
+        window.location.replace('https://admin.spai.org.br/api/auth/login');
       }
     } catch (error) {
       console.error("Erro ao deletar veterinário:", error);

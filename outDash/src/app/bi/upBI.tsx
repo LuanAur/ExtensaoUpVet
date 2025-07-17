@@ -56,8 +56,8 @@ const LancamentoModal: React.FC<LancamentoModalProps> = ({ isOpen, onClose }) =>
       };
 
       console.log("Sending payload:", JSON.stringify(payload));
-//http://168.231.88.35:8080/valor
-      const response = await authFetch(`http://168.231.88.35:8080/valor`, {
+//https://admin.spai.org.br/valor
+      const response = await authFetch(`https://admin.spai.org.br/api/valor`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -65,7 +65,7 @@ const LancamentoModal: React.FC<LancamentoModalProps> = ({ isOpen, onClose }) =>
 
       //token
       if (response.status === 403) {
-    window.location.replace('http://168.231.88.35:8080/aut/login');
+    window.location.replace('https://admin.spai.org.br/api/auth/login');
     return;
   }
 
